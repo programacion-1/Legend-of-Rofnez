@@ -11,22 +11,37 @@ public class Trap : MonoBehaviour
     private float fireRank = 1;
     [SerializeField] private float trapDamage = 10f; 
     BoxCollider objCollider;
+
+    //Trigger para saber si la trampa está activa o no
+    public bool onOffTrigger;
     private void Start()
     {
         particle = GetComponentInChildren<ParticleSystem>();
         objCollider = GetComponent<BoxCollider>();
         currentTime = 0;
+        SetTriggerOn();
     }
     private void FixedUpdate()
     {
-        currentTime -= Time.deltaTime;
-        if(currentTime<=0)
+        if(onOffTrigger)
+        {
+            currentTime -= Time.deltaTime;
+            if(currentTime<=0)
+            {
+                particle.enableEmission = false;
+                fireRank = 1;
+                objCollider.enabled = false;
+                StartCoroutine(waitToReactivate());
+            }
+        }
+        else
         {
             particle.enableEmission = false;
             fireRank = 1;
             objCollider.enabled = false;
-            StartCoroutine(waitToReactivate());
+            StopCoroutine(waitToReactivate());
         }
+        
     }
     IEnumerator waitToReactivate()
     {
@@ -46,6 +61,16 @@ public class Trap : MonoBehaviour
         {
             other.GetComponent<Health>().TakeDamage(trapDamage);
         }
+    }
+
+    public void SetTriggerOn()
+    {
+        onOffTrigger = true;
+    }
+
+    public void SetTriggerOff()
+    {
+        onOffTrigger = false;
     }
 
 }
