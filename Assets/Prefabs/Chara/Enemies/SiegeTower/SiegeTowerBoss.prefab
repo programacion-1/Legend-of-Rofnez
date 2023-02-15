@@ -158,6 +158,8 @@ MonoBehaviour:
   - 0.5
   shieldField: {fileID: 86946953}
   crystalPercentages: 230000001e00000019000000
+  fireClip: {fileID: 0}
+  shieldClip: {fileID: 0}
 --- !u!114 &2719682053727153944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,22 +174,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 420
   maxHealthPoints: 420
-  deadSound: {fileID: 0}
-  deadClipSound: {fileID: 0}
-  damageSound: {fileID: 0}
-  damageClipSound: {fileID: 0}
-  impactSound: {fileID: 0}
-  impactClipSound: {fileID: 0}
   poisoned: 0
   damagetik: 0
   poisonDamage: 0
   poisonedColor: {fileID: 0}
   shaderSpawnpoint: {fileID: 0}
+  audioManager: {fileID: 0}
+  deadClipSound: {fileID: 0}
+  damageClipSound: {fileID: 0}
+  impactClipSound: {fileID: 0}
+  poisonClipSound: {fileID: 0}
+  shieldClipSound: {fileID: 0}
   explosionVFX: {fileID: 4969831770428045821, guid: 85b58cf756c97fd4bb77ba6cc1e030fe,
     type: 3}
   hpAmountToActivateShield: 60
   timesToChangeIndexes: 010000000300000005000000
   bar: {fileID: 0}
+  swearClip: {fileID: 0}
 --- !u!114 &2719682053727153947
 MonoBehaviour:
   m_ObjectHideFlags: 0
