@@ -530,15 +530,18 @@ MonoBehaviour:
   healthPoints: 100
   maxHealthPoints: 100
   poisoned: 0
+  isFreezed: 0
   damagetik: 0
   poisonDamage: 0
-  poisonedColor: {fileID: 1071873450655753457}
+  charaRenderer: {fileID: 0}
   shaderSpawnpoint: {fileID: 2013218034227970706}
+  freezeColor: {r: 0, g: 0.28235295, b: 1, a: 1}
   audioManager: {fileID: 0}
   deadClipSound: {fileID: 8300000, guid: 1bf9ee80f2374534b80d6c5880558f5e, type: 3}
   damageClipSound: {fileID: 8300000, guid: c67b8f28ccb1a184cba5b958315fb75f, type: 3}
   impactClipSound: {fileID: 8300000, guid: 0d3d7afb5ec538343a9fd9d4235bdefa, type: 3}
   poisonClipSound: {fileID: 8300000, guid: 6e8d2234d41a8524080276e0c9138c93, type: 3}
+  shieldClipSound: {fileID: 0}
 --- !u!114 &6980606017180765471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -553,6 +556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightHandTransform: {fileID: 1071873450652732139}
   leftHandTransform: {fileID: 1071873450652805763}
+  magicAnims: []
   defaultMagic: {fileID: 11400000, guid: 425433cc4815a344db4361185be150fa, type: 2}
   currentMagic: {fileID: 0}
 --- !u!114 &1968687643
@@ -986,12 +990,6 @@ Transform:
 --- !u!4 &1071873450652805763 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 403948, guid: 679ff741e12a7e740819ede24a7000b7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1071873450652664687}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &1071873450655753457 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 13707166, guid: 679ff741e12a7e740819ede24a7000b7,
     type: 3}
   m_PrefabInstance: {fileID: 1071873450652664687}
   m_PrefabAsset: {fileID: 0}

@@ -12,12 +12,13 @@ namespace RPG.Core
         [SerializeField] float maxHealthPoints = 100f;
         private bool isDead;
         public bool poisoned;
-        bool isFreezed;
+        public bool isFreezed;
         float freezeLifeSpan;
         public int damagetik;
         public float poisonDamage;
         [SerializeField] Renderer charaRenderer;
         [SerializeField] Transform shaderSpawnpoint;
+        [SerializeField] Color freezeColor;
         bool isInvencible;
 
         [Header("Audio Clips")]
@@ -40,6 +41,21 @@ namespace RPG.Core
             return isDead;
         }
 
+        public void SetCharaRenderer(Renderer renderer)
+        {
+            charaRenderer = renderer;
+        }
+
+        public Renderer GetCharaRenderer(Renderer renderer)
+        {
+            return charaRenderer;
+        }
+
+        public void ChangeRendererColor(Color color)
+        {
+            charaRenderer.material.color = color;
+        }
+
         public void TakeDamage(float damage)
         {
             //Antes de recibir daño, chequeo si puedo deflectar el daño en el caso de tener un escudo equipado
@@ -51,21 +67,21 @@ namespace RPG.Core
                 }
                 else
                 {
-                    if (GetComponent<Fighter>().GetCurrentShield() != null)
+                    if(damage > 0)
                     {
-                        if (!GetComponent<Fighter>().GetCurrentShield().DeflectDamage())
+                        if (GetComponent<Fighter>().GetCurrentShield() != null)
                         {
-                            DamageBehavoiur(damage);
+                            if (!GetComponent<Fighter>().GetCurrentShield().DeflectDamage())
+                            {
+                                DamageBehavoiur(damage);
+                            }
+                            else
+                            {
+                                audioManager.TryToPlayClip(audioManager.PlayerSFXSources, shieldClipSound);
+                            }
                         }
-                        else
-                        {
-                            audioManager.TryToPlayClip(audioManager.PlayerSFXSources, shieldClipSound);
-                        }
-                    }
-                    else
-                    {
-                        DamageBehavoiur(damage);
-                    }
+                        else DamageBehavoiur(damage);
+                    }                    
                 }
             }
         }
@@ -84,8 +100,9 @@ namespace RPG.Core
         public void Freeze(float secondsToDefreeze)
         {
             isFreezed = true;
+            ChangeRendererColor(freezeColor);
+            GetComponent<Animator>().speed = 0;
             freezeLifeSpan = secondsToDefreeze;
-            charaRenderer.material.color = Color.cyan;
             StartCoroutine("Defreeze");
         }
 
@@ -93,7 +110,8 @@ namespace RPG.Core
         {
             yield return new WaitForSeconds(freezeLifeSpan);
             isFreezed = false;
-            charaRenderer.material.color = Color.white;
+            GetComponent<Animator>().speed = 1;
+            ChangeRendererColor(Color.white);
         }
 
         public void StopFreezing()
@@ -113,7 +131,7 @@ namespace RPG.Core
             poisonDamage = damage;
             damagetik = tik;
             poisoned = true;
-            charaRenderer.material.color = Color.green;
+            ChangeRendererColor(Color.green);
             StartCoroutine("tikDamage");
         }
         IEnumerator tikDamage() //Corrutina que restará daño al personaje por una cantidad igual al valor de 'damageTik'
@@ -125,7 +143,7 @@ namespace RPG.Core
 
             }
             poisoned = false;
-            charaRenderer.material.color = Color.white;
+            ChangeRendererColor(Color.white);
         }
 
         public abstract void ShowVisualChanges();
