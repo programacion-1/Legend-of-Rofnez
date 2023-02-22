@@ -207,6 +207,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6980606017180765471, guid: b16a1dadcb1385646a1cc6f61c1cbeb0,
+        type: 3}
+      propertyPath: magicAnims.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6980606017180765471, guid: b16a1dadcb1385646a1cc6f61c1cbeb0,
+        type: 3}
+      propertyPath: magicAnims.Array.data[0]
+      value: Projectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 6980606017180765471, guid: b16a1dadcb1385646a1cc6f61c1cbeb0,
+        type: 3}
+      propertyPath: magicAnims.Array.data[1]
+      value: Expansive
+      objectReference: {fileID: 0}
+    - target: {fileID: 6980606017180765471, guid: b16a1dadcb1385646a1cc6f61c1cbeb0,
+        type: 3}
+      propertyPath: magicAnims.Array.data[2]
+      value: Melee
+      objectReference: {fileID: 0}
+    - target: {fileID: 6980606017180765471, guid: b16a1dadcb1385646a1cc6f61c1cbeb0,
+        type: 3}
+      propertyPath: magicAnims.Array.data[3]
+      value: Defensive
+      objectReference: {fileID: 0}
+    - target: {fileID: 6980606017180765471, guid: b16a1dadcb1385646a1cc6f61c1cbeb0,
+        type: 3}
+      propertyPath: magicAnims.Array.data[4]
+      value: Heal
+      objectReference: {fileID: 0}
     - target: {fileID: 7808648453545543605, guid: b16a1dadcb1385646a1cc6f61c1cbeb0,
         type: 3}
       propertyPath: m_IsKinematic

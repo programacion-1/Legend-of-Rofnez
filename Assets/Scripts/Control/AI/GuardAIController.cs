@@ -22,9 +22,12 @@ namespace RPG.Control
         
         public override void UpdateBehaviour()
         {
-            if (InAttackRangeOfPlayer() && GetFighter().CanAttack(GetPlayer())) AttackBehaviour(); //Chequeo si el player está en mi rango de ataque y si puedo atacar.
-            else if (timeSinceLastSawPlayer <= suspicionTime) SuspicionBehaviour(); //Chequeo si aún está en guardia o vuelvo a patrullar
-            else PatrolBehaviour(); //Patrulla
+            if(!GetHealth().CheckIfIsFreezed())
+            {
+                if (InAttackRangeOfPlayer() && GetFighter().CanAttack(GetPlayer())) AttackBehaviour(); //Chequeo si el player está en mi rango de ataque y si puedo atacar.
+                else if (timeSinceLastSawPlayer <= suspicionTime) SuspicionBehaviour(); //Chequeo si aún está en guardia o vuelvo a patrullar
+                else PatrolBehaviour(); //Patrulla
+            }
         }
         public override void AttackBehaviour()
         {

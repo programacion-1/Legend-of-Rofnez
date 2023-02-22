@@ -14,13 +14,16 @@ namespace RPG.Combat
         [SerializeField] float mpToConsume = 5;
         [SerializeField] float magicCooldown = 2f;
         [SerializeField] GameObject equippedPrefab = null;
-        [SerializeField] AnimatorOverrideController animatorOverride = null;
+        //[SerializeField] AnimatorOverrideController animatorOverride = null;
         [SerializeField] MagicType magicType;
 
-        public Animator SetAnimatorOverride(Animator anim)
+        public void SetAnimatorMagicAnimation(Animator anim, string[] magicAnims)
         {
-            if(animatorOverride!= null) anim.runtimeAnimatorController = animatorOverride;
-            return anim;
+            for(int i = 0; i < magicAnims.Length; i++)
+            {
+                if(magicAnims[i] == magicType.ToString()) anim.SetBool(magicAnims[i], true);
+                else anim.SetBool(magicAnims[i], false);
+            }
         }
         
         public float GetMagicDamage()

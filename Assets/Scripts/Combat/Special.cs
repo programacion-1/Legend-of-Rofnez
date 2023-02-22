@@ -11,11 +11,13 @@ namespace RPG.Combat
         [SerializeField] Transform rightHandTransform;
         [SerializeField] Transform leftHandTransform;
         Animator anim;
+        [SerializeField] string[] magicAnims;
         protected MagicPoints magicPoints;
         [SerializeField] Magic defaultMagic = null;
         [SerializeField] protected Magic currentMagic = null;
 
         float timeToActivateMagic = Mathf.Infinity;
+        private Health specialTarget;
 
         void Start()
         {
@@ -38,8 +40,19 @@ namespace RPG.Combat
         public void setCurrentMagic(Magic magic)
         {
             currentMagic = magic;
-            anim = currentMagic.SetAnimatorOverride(anim);
+            currentMagic.SetAnimatorMagicAnimation(anim, magicAnims);
         }
+
+        public Health GetSpecialTarget()
+        {
+            return specialTarget;
+        }
+        
+        public void SetSpecialTarget(Health target)
+        {
+            specialTarget = target;
+        }
+
 
         public void SpecialAttack()
         {
@@ -71,11 +84,9 @@ namespace RPG.Combat
             if(currentMagic.GetMagicType() == MagicType.Projectile)
             {
                 GameObject projectileMagic = Instantiate(currentMagic.GetEquippedPrefab(), leftHandTransform.position, leftHandTransform.rotation);
-                projectileMagic.GetComponent<Projectile>().SetTarget(GameObject.FindObjectOfType<PlayerHealth>(), currentMagic.GetMagicDamage());
-                transform.rotation = GameObject.FindObjectOfType<PlayerHealth>().transform.rotation;
+                projectileMagic.GetComponent<Projectile>().SetTarget(specialTarget, currentMagic.GetMagicDamage());
             }
         }
-
         public void Cancel()
         {
             anim.ResetTrigger("MagicAttack");

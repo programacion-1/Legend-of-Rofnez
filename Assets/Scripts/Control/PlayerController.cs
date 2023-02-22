@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CombatEnums;
 using RPG.Movement;
 using RPG.Combat;
 using RPG.Core;
@@ -44,7 +45,13 @@ namespace RPG.Control
             {
                 health.SetInvencibility(false);
                 menuController.HideUIObject(menuController.GetGodModeText());
-            } 
+            }
+            //Test Area Begin
+            if(Input.GetKeyDown(KeyCode.T))
+            {
+                GetComponent<Animator>().SetTrigger("TestTrigger");
+            }
+            //Test Area End 
             if(ActivateSpecialAttack()) return;
             if(InteractWithCombat()) return;
             if(Input.GetKeyDown(KeyCode.Q))
@@ -69,8 +76,25 @@ namespace RPG.Control
         {
             if(Input.GetMouseButtonDown(1) && special.getCurrentMagic() != null)
             {
-                special.SpecialAttack();
-                return true;
+                bool canDoSpecial = true;
+
+                if(special.getCurrentMagic().GetMagicType() == MagicType.Projectile)
+                {
+                    if(GetProjectileTarget() != null)
+                    {
+                        special.SetSpecialTarget(GetProjectileTarget());
+                        canDoSpecial = true;
+                    }
+                    else canDoSpecial = false;
+                }
+                
+                if(canDoSpecial)
+                {
+                    special.SpecialAttack();
+                    return true;
+                }
+
+                else return false;
             }
             else return false;
         }
@@ -151,6 +175,23 @@ namespace RPG.Control
                 default:
                     return false;
             }
+        }
+
+        private Health GetProjectileTarget()
+        {
+            RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
+            foreach(RaycastHit hit in hits)
+            {
+                CombatTarget target = hit.transform.gameObject.GetComponent<CombatTarget>();
+                if(target == null) continue;
+                else
+                {
+                    //Cambio la rotación del personaje para que apunte al objetivo. #SUPERHARDCODEADOXD
+                    transform.rotation = target.transform.rotation * Quaternion.Euler(0, -target.transform.rotation.y*180,0);
+                    return target.GetComponent<Health>();
+                } 
+            }
+            return null;
         }
     }
 }

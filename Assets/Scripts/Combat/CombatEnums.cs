@@ -12,4 +12,10 @@ namespace CombatEnums
         Defensive,
         Heal
     }
+
+    public enum CharaType
+    {
+        Player,
+        Enemy
+    }
 }

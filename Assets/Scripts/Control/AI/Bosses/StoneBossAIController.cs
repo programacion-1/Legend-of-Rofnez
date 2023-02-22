@@ -63,6 +63,7 @@ namespace RPG.Control
             castedFireball = true;
             timeSinceThrewFireball = 0;
             timeUntilICanAttack = 0;
+            special.SetSpecialTarget(GameObject.FindObjectOfType<PlayerHealth>());
             special.SpecialAttack();
         }
     }

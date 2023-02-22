@@ -12,9 +12,11 @@ namespace RPG.Core
         [SerializeField] float maxHealthPoints = 100f;
         private bool isDead;
         public bool poisoned;
+        bool isFreezed;
+        float freezeLifeSpan;
         public int damagetik;
         public float poisonDamage;
-        [SerializeField] Renderer poisonedColor;
+        [SerializeField] Renderer charaRenderer;
         [SerializeField] Transform shaderSpawnpoint;
         bool isInvencible;
 
@@ -79,13 +81,39 @@ namespace RPG.Core
             }
         }
 
+        public void Freeze(float secondsToDefreeze)
+        {
+            isFreezed = true;
+            freezeLifeSpan = secondsToDefreeze;
+            charaRenderer.material.color = Color.cyan;
+            StartCoroutine("Defreeze");
+        }
+
+        IEnumerator Defreeze()
+        {
+            yield return new WaitForSeconds(freezeLifeSpan);
+            isFreezed = false;
+            charaRenderer.material.color = Color.white;
+        }
+
+        public void StopFreezing()
+        {
+            StopCoroutine("Defreeze");
+            isFreezed = false;
+        }
+
+        public bool CheckIfIsFreezed()
+        {
+            return isFreezed;
+        }
+
         public void poisonDamages(int tik,float damage) // Función que setea el daño y el tik del veneno y ejecuta la corrutina tikDamage()
         {
             audioManager.TryToPlayClip(audioManager.PlayerSFXSources, poisonClipSound);
             poisonDamage = damage;
             damagetik = tik;
             poisoned = true;
-            poisonedColor.material.color = Color.green;
+            charaRenderer.material.color = Color.green;
             StartCoroutine("tikDamage");
         }
         IEnumerator tikDamage() //Corrutina que restará daño al personaje por una cantidad igual al valor de 'damageTik'
@@ -97,7 +125,7 @@ namespace RPG.Core
 
             }
             poisoned = false;
-            poisonedColor.material.color = Color.white;
+            charaRenderer.material.color = Color.white;
         }
 
         public abstract void ShowVisualChanges();
@@ -120,6 +148,7 @@ namespace RPG.Core
         {
             if (isDead) return;
             isDead = true;
+            StopFreezing();
             DeathBehaviour();
         }
 
