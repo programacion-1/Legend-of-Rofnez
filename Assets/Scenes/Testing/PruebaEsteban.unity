@@ -156,7 +156,7 @@ MonoBehaviour:
   poisoned: 0
   damagetik: 0
   poisonDamage: 0
-  poisonedColor: {fileID: 0}
+  charaRenderer: {fileID: 0}
   shaderSpawnpoint: {fileID: 0}
   audioManager: {fileID: 0}
   deadClipSound: {fileID: 8300000, guid: 59da0ad043828c446b7a2acc7524d008, type: 3}
@@ -771,7 +771,7 @@ MonoBehaviour:
   poisoned: 0
   damagetik: 0
   poisonDamage: 0
-  poisonedColor: {fileID: 0}
+  charaRenderer: {fileID: 0}
   shaderSpawnpoint: {fileID: 0}
   audioManager: {fileID: 0}
   deadClipSound: {fileID: 8300000, guid: 59da0ad043828c446b7a2acc7524d008, type: 3}
