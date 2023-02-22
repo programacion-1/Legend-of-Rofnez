@@ -9,6 +9,7 @@ public class Trap : MonoBehaviour
     private float currentTime;
     public float time = 2f;
     private float fireRank = 1;
+    [SerializeField] float waitTimeTrapDesactivater = 5f; 
     [SerializeField] private float trapDamage = 10f; 
     BoxCollider objCollider;
 
@@ -46,7 +47,7 @@ public class Trap : MonoBehaviour
     IEnumerator waitToReactivate()
     {
         
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(waitTimeTrapDesactivater);
         objCollider.enabled = true;
         particle.enableEmission = true;
         fireRank += Time.deltaTime;
