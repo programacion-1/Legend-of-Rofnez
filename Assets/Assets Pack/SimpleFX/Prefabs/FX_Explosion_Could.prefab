@@ -5806,7 +5806,7 @@ ParticleSystem:
         m_RotationOrder: 4
     y:
       serializedVersion: 2
-      minMaxState: 1
+      minMaxState: 2
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -5859,7 +5859,7 @@ ParticleSystem:
         m_RotationOrder: 4
     z:
       serializedVersion: 2
-      minMaxState: 1
+      minMaxState: 2
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -6082,10 +6082,10 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 0.9254902, b: 0.68235296, a: 1}
-        key1: {r: 1, g: 0.7647059, b: 0, a: 1}
-        key2: {r: 1, g: 0, b: 0, a: 1}
-        key3: {r: 0.42745098, g: 0, b: 0, a: 0}
+        key0: {r: 0.68235296, g: 1, b: 0.98226434, a: 1}
+        key1: {r: 0.29214135, g: 0.78300923, b: 0.9528302, a: 1}
+        key2: {r: 0, g: 0.39426947, b: 1, a: 1}
+        key3: {r: 0.20955937, g: 0.022249907, b: 0.9433962, a: 0}
         key4: {r: 1, g: 0, b: 0, a: 0}
         key5: {r: 1, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
@@ -9481,7 +9481,7 @@ GameObject:
   - component: {fileID: 19821056}
   - component: {fileID: 19943340}
   m_Layer: 0
-  m_Name: FX_Explosion_Rubble
+  m_Name: FX_Explosion_Could
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9657,7 +9657,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.3445621, g: 0.6273225, b: 0.8207547, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -10484,7 +10484,7 @@ ParticleSystem:
         m_RotationOrder: 4
     y:
       serializedVersion: 2
-      minMaxState: 1
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -10537,7 +10537,7 @@ ParticleSystem:
         m_RotationOrder: 4
     z:
       serializedVersion: 2
-      minMaxState: 1
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -10760,10 +10760,10 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 0.9254902, b: 0.68235296, a: 1}
-        key1: {r: 1, g: 0.7647059, b: 0, a: 1}
-        key2: {r: 1, g: 0, b: 0, a: 1}
-        key3: {r: 0.42745098, g: 0, b: 0, a: 0}
+        key0: {r: 0.68235296, g: 1, b: 0.96626526, a: 1}
+        key1: {r: 0, g: 0.79665923, b: 1, a: 1}
+        key2: {r: 0, g: 0.18643236, b: 1, a: 1}
+        key3: {r: 0.08953027, g: 0, b: 0.5188679, a: 0}
         key4: {r: 1, g: 0, b: 0, a: 0}
         key5: {r: 1, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
