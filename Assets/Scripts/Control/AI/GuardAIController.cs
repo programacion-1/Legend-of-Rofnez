@@ -28,6 +28,10 @@ namespace RPG.Control
                 else if (timeSinceLastSawPlayer <= suspicionTime) SuspicionBehaviour(); //Chequeo si aún está en guardia o vuelvo a patrullar
                 else PatrolBehaviour(); //Patrulla
             }
+            else
+            {
+                GetActionScheduler().CancelCurrentAction();
+            }
         }
         public override void AttackBehaviour()
         {

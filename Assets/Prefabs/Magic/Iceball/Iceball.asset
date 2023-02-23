@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d479f6d49e05ba4d92af294f9fa5d32, type: 3}
   m_Name: Iceball
   m_EditorClassIdentifier: 
-  magicDamage: 5
+  magicDamage: 0
   mpToConsume: 5
   magicCooldown: 2
-  equippedPrefab: {fileID: 8095572290885335392, guid: dc7277f3cbd4d8e4e883ce2318b3d084,
+  equippedPrefab: {fileID: 8095572290885335392, guid: 85aa1c3de21528e4d8cfb3bd3d2d7b7b,
     type: 3}
   magicType: 0
