@@ -60,7 +60,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 2
+  waitTimeTrapDesactivater: 5
   trapDamage: 10
+  onOffTrigger: 0
 --- !u!1001 &6278867575869999214
 PrefabInstance:
   m_ObjectHideFlags: 0

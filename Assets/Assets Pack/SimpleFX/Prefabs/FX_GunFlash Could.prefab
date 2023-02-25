@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 160796, guid: 0ce790f3ef4f4594c9c3ce9da428efc7, type: 3}
       propertyPath: m_Name
-      value: FX_GunFlash 2
+      value: FX_GunFlash Could
       objectReference: {fileID: 0}
     - target: {fileID: 447148, guid: 0ce790f3ef4f4594c9c3ce9da428efc7, type: 3}
       propertyPath: m_LocalPosition.x
