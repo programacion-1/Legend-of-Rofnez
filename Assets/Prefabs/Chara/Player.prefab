@@ -534,7 +534,7 @@ MonoBehaviour:
   isFreezed: 0
   damagetik: 0
   poisonDamage: 0
-  charaRenderer: {fileID: 0}
+  charaRenderer: {fileID: 1071873450655753457}
   shaderSpawnpoint: {fileID: 2013218034227970706}
   freezeColor: {r: 0, g: 0.28235295, b: 1, a: 1}
   audioManager: {fileID: 0}
@@ -557,7 +557,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightHandTransform: {fileID: 1071873450652732139}
   leftHandTransform: {fileID: 1071873450652805763}
-  magicAnims: []
+  magicAnims:
+  - Projectile
+  - Expansive
+  - Melee
+  - Defensive
+  - Heal
   defaultMagic: {fileID: 11400000, guid: 425433cc4815a344db4361185be150fa, type: 2}
   currentMagic: {fileID: 0}
 --- !u!114 &1968687643
@@ -600,11 +605,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5837844adcec65c4a8c0442b70db9015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHP_potions: 4
+  currentHP_potions: 1
   maxHP_potions: 5
   pointsToHealHP: 25
   healVFX: {fileID: 8375701483854294788, guid: fe7f5ca6ac85cbe4095c054c43ebabc4, type: 3}
-  currentMP_potions: 4
+  currentMP_potions: 1
   maxMP_potions: 5
   pointsToHealMP: 20
   mpVFX: {fileID: 8375701483854294788, guid: de19cc994de0c4747bf67c8b1cb15961, type: 3}
@@ -1002,15 +1007,21 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 3f6fc0cf5e5d31c458bc74ede87cb8ae, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 679ff741e12a7e740819ede24a7000b7, type: 3}
---- !u!4 &1071873450652732139 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 461188, guid: 679ff741e12a7e740819ede24a7000b7,
-    type: 3}
-  m_PrefabInstance: {fileID: 1071873450652664687}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1071873450652805763 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 403948, guid: 679ff741e12a7e740819ede24a7000b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1071873450652664687}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1071873450655753457 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 13707166, guid: 679ff741e12a7e740819ede24a7000b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1071873450652664687}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1071873450652732139 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 461188, guid: 679ff741e12a7e740819ede24a7000b7,
     type: 3}
   m_PrefabInstance: {fileID: 1071873450652664687}
   m_PrefabAsset: {fileID: 0}

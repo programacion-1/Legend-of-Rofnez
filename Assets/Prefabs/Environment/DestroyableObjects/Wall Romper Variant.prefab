@@ -52,6 +52,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0fe1a05800091b40bb1dde11c052948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!208 &175814029
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8742396615805685988}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.5, y: 2.5, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.5, y: 2.5, z: -0.136}
+  m_TimeToStationary: 0.5
 --- !u!1001 &8742396615805808320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61,7 +77,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 163364, guid: 25e618ad9977daf44a684be7ffc5046b, type: 3}
       propertyPath: m_Name
-      value: Wall Romper
+      value: Wall Romper Variant
       objectReference: {fileID: 0}
     - target: {fileID: 163364, guid: 25e618ad9977daf44a684be7ffc5046b, type: 3}
       propertyPath: m_NavMeshLayer
@@ -73,15 +89,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 461498, guid: 25e618ad9977daf44a684be7ffc5046b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 96.99692
+      value: 4.7257166
       objectReference: {fileID: 0}
     - target: {fileID: 461498, guid: 25e618ad9977daf44a684be7ffc5046b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.997059
+      value: -0.36
       objectReference: {fileID: 0}
     - target: {fileID: 461498, guid: 25e618ad9977daf44a684be7ffc5046b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 46.899143
+      value: 9.980444
       objectReference: {fileID: 0}
     - target: {fileID: 461498, guid: 25e618ad9977daf44a684be7ffc5046b, type: 3}
       propertyPath: m_LocalRotation.x

@@ -40,6 +40,11 @@ namespace RPG.Combat
         public void setCurrentMagic(Magic magic)
         {
             currentMagic = magic;
+            UpdateAnimatorMagicBool();
+        }
+
+        public void UpdateAnimatorMagicBool()
+        {
             currentMagic.SetAnimatorMagicAnimation(anim, magicAnims);
         }
 

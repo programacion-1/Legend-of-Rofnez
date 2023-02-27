@@ -183,6 +183,7 @@ namespace RPG.Control
                 if (fighter.GetCurrentWeapon() == weaponInventory.GetMeleeWeapon()) fighter.ShowShield();
                 else fighter.HideShield();
             }
+            special.UpdateAnimatorMagicBool();
         }
 
         private bool CheckRaycastTags(RaycastHit hitPoint)

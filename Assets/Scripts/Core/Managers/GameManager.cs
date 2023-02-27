@@ -90,6 +90,7 @@ namespace RPG.Core
             currentScene = sceneLoader.GetCurrentScene();
             player.SetStartingHealthSettings();
             player.GetComponent<MagicPoints>().SetStartingMagicPointsSettings();
+            player.GetComponent<ItemInventory>().SetStartingInventorySettings();
             CamaraFollower camaraFollower = GameObject.FindObjectOfType<CamaraFollower>();
             questManager = GameObject.FindObjectOfType<QuestManager>();
             GameObject.FindObjectOfType<QuestManager>().StartingSettings();

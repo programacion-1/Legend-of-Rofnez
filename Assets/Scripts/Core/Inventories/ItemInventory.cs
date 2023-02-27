@@ -24,6 +24,11 @@ namespace RPG.Core
         void Start()
         {
             itemInventoryMenu = GameObject.FindObjectOfType<ItemInventoryMenu>().GetComponent<ItemInventoryMenu>();
+            SetStartingInventorySettings();
+        }
+
+        public void SetStartingInventorySettings()
+        {
             SetHPPotQuantity();
             SetMPPotQuantity();
         }
