@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Unarmed-Boss
   m_EditorClassIdentifier: 
   weaponRange: 2
-  weaponDamage: 7.5
+  weaponDamage: 10
   timeBetweenAttacks: 4
   equippedPrefab: {fileID: 1646692550931462815, guid: 0794dc291829078458aeb3f660b35386,
     type: 3}
   animatorOverride: {fileID: 0}
   isRightHanded: 0
   projectile: {fileID: 0}
+  ammo: 0
+  weaponSprite: {fileID: 0}

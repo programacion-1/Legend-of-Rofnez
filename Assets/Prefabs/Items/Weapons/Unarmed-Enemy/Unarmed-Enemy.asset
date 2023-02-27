@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Unarmed-Enemy
   m_EditorClassIdentifier: 
   weaponRange: 1
-  weaponDamage: 3
+  weaponDamage: 5
   timeBetweenAttacks: 2
   equippedPrefab: {fileID: 1646692550931462815, guid: 3b58501106b24794ea0ce6f2c04946f3,
     type: 3}
   animatorOverride: {fileID: 0}
   isRightHanded: 0
   projectile: {fileID: 0}
+  ammo: 0
+  weaponSprite: {fileID: 0}

@@ -153,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 20
   maxHealthPoints: 20
+  isBoss: 0
   poisoned: 0
   isFreezed: 0
   damagetik: 0
@@ -769,6 +770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 20
   maxHealthPoints: 20
+  isBoss: 0
   poisoned: 0
   isFreezed: 0
   damagetik: 0
@@ -1516,7 +1518,7 @@ PrefabInstance:
     - target: {fileID: 8442373102116304953, guid: 982dc822df09cc04596c19723a9e3887,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8442373102116304953, guid: 982dc822df09cc04596c19723a9e3887,
         type: 3}
@@ -1582,7 +1584,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1333722122 stripped
 Transform:
@@ -3239,7 +3241,7 @@ PrefabInstance:
     - target: {fileID: 7182213599483918268, guid: 52471393e00672b4abb9679928fb5aad,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8016813167046956759, guid: 52471393e00672b4abb9679928fb5aad,
         type: 3}
@@ -3627,5 +3629,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9143005049293222998, guid: 9cf9ec8a43fc61c4b9bf374af0812e8f,
+        type: 3}
+      propertyPath: defaultMagic
+      value: 
+      objectReference: {fileID: 11400000, guid: b62e0e4974eb82d41a94fb2f9a9d0f18,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cf9ec8a43fc61c4b9bf374af0812e8f, type: 3}

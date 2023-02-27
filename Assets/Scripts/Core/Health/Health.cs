@@ -21,6 +21,7 @@ namespace RPG.Core
         [SerializeField] Transform shaderSpawnpoint;
         [SerializeField] Color freezeColor;
         bool isInvencible;
+        float damageTimer;
 
         [Header("Audio Clips")]
         public AudioManager audioManager;
@@ -96,6 +97,15 @@ namespace RPG.Core
             {
                 Die();
             }
+            StartCoroutine(MiniInvincibilityCo());
+        }
+
+        private IEnumerator MiniInvincibilityCo()
+        {
+            Debug.Log("ouch");
+            isInvencible = true;
+            yield return new WaitForSeconds(1f);
+            isInvencible = false;
         }
 
         public void Freeze(float secondsToDefreeze)

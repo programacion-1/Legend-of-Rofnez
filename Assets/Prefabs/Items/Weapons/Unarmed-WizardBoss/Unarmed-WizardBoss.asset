@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Unarmed-WizardBoss
   m_EditorClassIdentifier: 
   weaponRange: 10
-  weaponDamage: 5
+  weaponDamage: 10
   timeBetweenAttacks: 2
   equippedPrefab: {fileID: 0}
   animatorOverride: {fileID: 0}
   isRightHanded: 1
   projectile: {fileID: 0}
+  ammo: 0
+  weaponSprite: {fileID: 0}

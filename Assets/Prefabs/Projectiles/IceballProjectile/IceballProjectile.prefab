@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f5c94a8dcf1a2f4fb0054939ea807e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  freezeLifeSpan: 8
+  freezeLifeSpan: 6
   targetToFreeze: 1
 --- !u!1001 &1948683382153623877
 PrefabInstance:
