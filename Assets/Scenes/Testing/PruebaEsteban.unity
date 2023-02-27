@@ -3638,26 +3638,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 95303049069548370, guid: 9cf9ec8a43fc61c4b9bf374af0812e8f,
-        type: 3}
-      propertyPath: currentHP_potions
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 95303049069548370, guid: 9cf9ec8a43fc61c4b9bf374af0812e8f,
-        type: 3}
-      propertyPath: currentMP_potions
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 95303049069548370, guid: 9cf9ec8a43fc61c4b9bf374af0812e8f,
-        type: 3}
-      propertyPath: maxHP_potions
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 95303049069548370, guid: 9cf9ec8a43fc61c4b9bf374af0812e8f,
-        type: 3}
-      propertyPath: maxMP_potions
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1665362098967009106, guid: 9cf9ec8a43fc61c4b9bf374af0812e8f,
         type: 3}
       propertyPath: persistantObjectDestroyer
