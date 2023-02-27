@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6278867576472954872}
   - component: {fileID: 6278867576472954879}
-  - component: {fileID: 6278867576472954878}
+  - component: {fileID: 3193751429792526929}
   m_Layer: 9
   m_Name: FireTrap
   m_TagString: Untagged
@@ -47,7 +47,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.2163258, z: 1}
   m_Center: {x: 0, y: 0.6081629, z: 0}
---- !u!114 &6278867576472954878
+--- !u!114 &3193751429792526929
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,7 +56,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6278867576472954877}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e1c3c7f707eadd45a8d58d4d36cfe2b, type: 3}
+  m_Script: {fileID: 11500000, guid: e98960a791c8054479754b95f5408619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   time: 2

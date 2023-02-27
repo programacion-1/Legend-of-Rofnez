@@ -3,65 +3,59 @@ using System.Collections.Generic;
 using UnityEngine;
 using RPG.Core;
 
-public class Trap : MonoBehaviour
+public abstract class Trap : MonoBehaviour
 {
-    private ParticleSystem particle;
     private float currentTime;
-    public float time = 2f;
+    [SerializeField] float time = 2f;
     private float fireRank = 1;
     [SerializeField] float waitTimeTrapDesactivater = 5f; 
     [SerializeField] private float trapDamage = 10f; 
-    BoxCollider objCollider;
 
     //Trigger para saber si la trampa está activa o no
-    public bool onOffTrigger;
+    [SerializeField] bool onOffTrigger;
+    
     private void Start()
     {
-        particle = GetComponentInChildren<ParticleSystem>();
-        objCollider = GetComponent<BoxCollider>();
         currentTime = 0;
         SetTriggerOn();
-    }
-    private void FixedUpdate()
-    {
-        if(onOffTrigger)
-        {
-            currentTime -= Time.deltaTime;
-            if(currentTime<=0)
-            {
-                particle.enableEmission = false;
-                fireRank = 1;
-                objCollider.enabled = false;
-                StartCoroutine(waitToReactivate());
-            }
-        }
-        else
-        {
-            particle.enableEmission = false;
-            fireRank = 1;
-            objCollider.enabled = false;
-            StopCoroutine(waitToReactivate());
-        }
-        
-    }
-    IEnumerator waitToReactivate()
-    {
-        
-        yield return new WaitForSeconds(waitTimeTrapDesactivater);
-        objCollider.enabled = true;
-        particle.enableEmission = true;
-        fireRank += Time.deltaTime;
-        Mathf.Clamp(fireRank, 0, 4);
-        particle.startLifetime = fireRank;
-        currentTime = time;
+        UniqueStartSettings();
     }
 
-    private void OnTriggerEnter(Collider other)
+    //Getters y Setters
+
+    public float GetCurrentTime()
     {
-        if(other.gameObject.tag == "Player")
-        {
-            other.GetComponent<Health>().TakeDamage(trapDamage);
-        }
+        return currentTime;
+    }
+
+    public void SetCurrentTime(float t)
+    {
+        currentTime = t;
+    }
+
+    public float GetTime()
+    {
+        return time;
+    }
+
+    public float GetFireRank()
+    {
+        return fireRank;
+    }
+
+    public void SetFireRank(float fR)
+    {
+        fireRank = fR;
+    }
+
+    public float GetWaitTimeTrapDesactivater()
+    {
+        return waitTimeTrapDesactivater;
+    }
+
+    public float GetTrapDamage()
+    {
+        return trapDamage;
     }
 
     public void SetTriggerOn()
@@ -73,5 +67,40 @@ public class Trap : MonoBehaviour
     {
         onOffTrigger = false;
     }
+
+    //FixedUpdate
+
+    private void FixedUpdate()
+    {
+        if(onOffTrigger)
+        {
+            TrapActivatedBehaviour();
+        }
+        else
+        {
+            TrapDeactivatedBehaviour();
+        }
+        
+    }
+
+    //Abstract Classes
+
+    public abstract IEnumerator waitToReactivate();
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            TrapEffect(other.GetComponent<Health>());
+        }
+    }
+
+    public abstract void UniqueStartSettings();
+
+    public abstract void TrapActivatedBehaviour();
+
+    public abstract void TrapDeactivatedBehaviour();
+
+    public abstract void TrapEffect(Health target);
 
 }

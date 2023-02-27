@@ -7,6 +7,8 @@ public class TrapB : MonoBehaviour
 {
     [SerializeField] private int damage;
     [SerializeField] private Vector3 impulse;
+    
+    
     protected void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<PlayerHealth>() != null)
