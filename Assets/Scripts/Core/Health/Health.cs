@@ -116,8 +116,10 @@ namespace RPG.Core
 
         public void StopFreezing()
         {
-            StopCoroutine("Defreeze");
+            StopCoroutine("Freeze");
             isFreezed = false;
+            GetComponent<Animator>().speed = 1;
+            ChangeRendererColor(Color.white);
         }
 
         public bool CheckIfIsFreezed()
@@ -166,7 +168,7 @@ namespace RPG.Core
         {
             if (isDead) return;
             isDead = true;
-            StopFreezing();
+            if(isFreezed) StopFreezing();
             DeathBehaviour();
         }
 

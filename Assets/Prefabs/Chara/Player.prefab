@@ -309,6 +309,7 @@ GameObject:
   - component: {fileID: 6980606017180765471}
   - component: {fileID: 1968687643}
   - component: {fileID: 1968687644}
+  - component: {fileID: 2256575030743231003}
   - component: {fileID: 6062337603907622159}
   m_Layer: 0
   m_Name: Player
@@ -587,6 +588,26 @@ MonoBehaviour:
   equippedMeleeWeapon: {fileID: 0}
   equippedRangedWeapon: {fileID: 0}
   activeWeapon: {fileID: 0}
+--- !u!114 &2256575030743231003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3810658928676046845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5837844adcec65c4a8c0442b70db9015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHP_potions: 4
+  maxHP_potions: 5
+  pointsToHealHP: 25
+  healVFX: {fileID: 8375701483854294788, guid: fe7f5ca6ac85cbe4095c054c43ebabc4, type: 3}
+  currentMP_potions: 4
+  maxMP_potions: 5
+  pointsToHealMP: 20
+  mpVFX: {fileID: 8375701483854294788, guid: de19cc994de0c4747bf67c8b1cb15961, type: 3}
 --- !u!114 &6062337603907622159
 MonoBehaviour:
   m_ObjectHideFlags: 0

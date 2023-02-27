@@ -15,16 +15,22 @@ namespace RPG.Control
         Fighter fighter;
         Special special;
         Health health;
+        MagicPoints magicPoints;
         WeaponInventory weaponInventory;
+        ItemInventory itemInventory;
         MenuController menuController;
         PlayerCursor playerCursor;
         bool GodMode;
+        bool canHealHP = true;
+        bool canHealMP = true;
         private void Start()
         {
             fighter = GetComponent<Fighter>();
             special = GetComponent<Special>();
             health = GetComponent<Health>();
+            magicPoints = GetComponent<MagicPoints>();
             weaponInventory = GetComponent<WeaponInventory>();
+            itemInventory = GetComponent<ItemInventory>();
             playerCursor = GetComponent<PlayerCursor>();
             menuController = GameObject.FindObjectOfType<MenuController>();
         }
@@ -49,16 +55,18 @@ namespace RPG.Control
             //Test Area Begin
             if(Input.GetKeyDown(KeyCode.T))
             {
-                GetComponent<Animator>().SetTrigger("TestTrigger");
+                Debug.Log("test");           
             }
             //Test Area End 
             if(ActivateSpecialAttack()) return;
             if(InteractWithCombat()) return;
+            
             if(Input.GetKeyDown(KeyCode.Q))
             {
                 ChangePlayerActiveWeapon();
                 return;
             }
+
             if(Input.GetKeyDown(KeyCode.Tab))
             {
                 menuController.ShowUIObject(GameObject.FindObjectOfType<MenuController>().GetWeaponInventoryMenu());
@@ -68,6 +76,21 @@ namespace RPG.Control
             if(Input.GetKeyUp(KeyCode.Tab))
             {
                 menuController.HideUIObject(GameObject.FindObjectOfType<MenuController>().GetWeaponInventoryMenu());
+            }
+
+            if(Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                 if(itemInventory.GetCurrentHPpotions() > 0 && canHealHP) StartCoroutine("healHP");
+            }
+
+            if(Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                 if(itemInventory.GetCurrentMPpotions() > 0 && canHealMP) StartCoroutine("healMP");
+            }
+
+            {
+                Debug.Log("test");
+                if(itemInventory.GetCurrentHPpotions() > 0 && canHealHP) StartCoroutine("healHP");
             }
             if(InteractWithMovement()) return;
         }
@@ -192,6 +215,24 @@ namespace RPG.Control
                 } 
             }
             return null;
+        }
+
+        private IEnumerator healHP()
+        {
+            canHealHP = false;
+            itemInventory.HealHP(health);
+            GetComponent<ActionScheduler>().CancelCurrentAction();
+            yield return new WaitForSeconds(1f);
+            canHealHP = true;
+        }
+
+        private IEnumerator healMP()
+        {
+            canHealMP = false;
+            itemInventory.HealMP(magicPoints);
+            GetComponent<ActionScheduler>().CancelCurrentAction();
+            yield return new WaitForSeconds(1f);
+            canHealMP = true;
         }
     }
 }
