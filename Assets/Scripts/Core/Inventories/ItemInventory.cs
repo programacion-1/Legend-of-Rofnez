@@ -1,63 +1,72 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using RPG.UI;
 
 namespace RPG.Core
 {
     public class ItemInventory : MonoBehaviour
     {
         //HP Potions
-        [SerializeField] float currentHP_potions;
-        [SerializeField] float maxHP_potions;
+        [SerializeField] int currentHP_potions;
+        [SerializeField] int maxHP_potions;
         [SerializeField] float pointsToHealHP;
         [SerializeField] GameObject healVFX;
 
         //MP Potions
-        [SerializeField] float currentMP_potions;
-        [SerializeField] float maxMP_potions;
+        [SerializeField] int currentMP_potions;
+        [SerializeField] int maxMP_potions;
         [SerializeField] float pointsToHealMP;
         [SerializeField] GameObject mpVFX;
+
+        ItemInventoryMenu itemInventoryMenu;
+
+        void Start()
+        {
+            itemInventoryMenu = GameObject.FindObjectOfType<ItemInventoryMenu>().GetComponent<ItemInventoryMenu>();
+            SetHPPotQuantity();
+            SetMPPotQuantity();
+        }
 
 
         //Getters y Setters
 
-        public float GetCurrentHPpotions()
+        public int GetCurrentHPpotions()
         {
             return currentHP_potions;
         }
 
-        public float GetMaxHPpotions()
+        public int GetMaxHPpotions()
         {
             return maxHP_potions;
         }
 
-        public float GetCurrentMPpotions()
+        public int GetCurrentMPpotions()
         {
             return currentMP_potions;
         }
 
-        public float GetMaxMPpotions()
+        public int GetMaxMPpotions()
         {
             return maxMP_potions;
         }
 
-        public void SetCurrentHPpotions(float potions)
+        public void SetCurrentHPpotions(int potions)
         {
             currentHP_potions = potions;
         }
 
-        public void SetMaxHPpotions(float potions)
+        public void SetMaxHPpotions(int potions)
         {
             maxHP_potions = potions;
         }
 
-        public void SetCurrentMPpotions(float potions)
+        public void SetCurrentMPpotions(int potions)
         {
             currentMP_potions = potions;
         }
 
-        public void SetMaxMPpotions(float potions)
+        public void SetMaxMPpotions(int potions)
         {
             maxMP_potions = potions;
         }
@@ -67,6 +76,7 @@ namespace RPG.Core
             SetCurrentHPpotions(currentHP_potions-1);
             health.SpawnShader(healVFX);
             health.Heal(pointsToHealHP);
+            SetHPPotQuantity();
         }
 
         public void HealMP(MagicPoints magicPoints)
@@ -74,9 +84,24 @@ namespace RPG.Core
             SetCurrentMPpotions(currentMP_potions-1);
             magicPoints.GetComponent<Health>().SpawnShader(mpVFX);
             magicPoints.RestoreMagicPoints(pointsToHealMP);
+            SetMPPotQuantity();
         }
 
+        public void SetHPPotQuantity()
+        {
+            itemInventoryMenu.SetHealthPotQuantityText(currentHP_potions.ToString());
+            if(currentHP_potions == maxHP_potions) itemInventoryMenu.SetTextColor(Color.green, itemInventoryMenu.GetHealthPotQuantityText());
+            else if(currentHP_potions == 0) itemInventoryMenu.SetTextColor(Color.red, itemInventoryMenu.GetHealthPotQuantityText());
+            else itemInventoryMenu.SetTextColor(Color.white, itemInventoryMenu.GetHealthPotQuantityText());
+        }
 
+        public void SetMPPotQuantity()
+        {
+            itemInventoryMenu.SetMagicPotQuantityText(currentMP_potions.ToString());
+            if(currentMP_potions == maxMP_potions) itemInventoryMenu.SetTextColor(Color.green, itemInventoryMenu.GetMagicPotQuantityText());
+            else if(currentMP_potions == 0) itemInventoryMenu.SetTextColor(Color.red, itemInventoryMenu.GetMagicPotQuantityText());
+            else itemInventoryMenu.SetTextColor(Color.white, itemInventoryMenu.GetMagicPotQuantityText());
+        }
     }
 
 }

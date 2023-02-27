@@ -148,6 +148,26 @@ PrefabInstance:
       propertyPath: charaRenderer
       value: 
       objectReference: {fileID: 1216655451810700728}
+    - target: {fileID: 2256575030743231003, guid: b16a1dadcb1385646a1cc6f61c1cbeb0,
+        type: 3}
+      propertyPath: currentHP_potions
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256575030743231003, guid: b16a1dadcb1385646a1cc6f61c1cbeb0,
+        type: 3}
+      propertyPath: maxHP_potions
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256575030743231003, guid: b16a1dadcb1385646a1cc6f61c1cbeb0,
+        type: 3}
+      propertyPath: currentMP_potions
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2256575030743231003, guid: b16a1dadcb1385646a1cc6f61c1cbeb0,
+        type: 3}
+      propertyPath: maxMP_potions
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3810658928676046843, guid: b16a1dadcb1385646a1cc6f61c1cbeb0,
         type: 3}
       propertyPath: m_LocalPosition.x

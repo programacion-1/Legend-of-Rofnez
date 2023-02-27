@@ -7,13 +7,15 @@ namespace RPG.Item
 {
     public class HealPickup : ItemPickup
     {
-        [SerializeField] float pointToHeal;
-        [SerializeField] GameObject healVFX;
         public override void UseItem(GameObject player)
         {
-            player.GetComponent<Health>().Heal(pointToHeal);
-            player.GetComponent<Health>().SpawnShader(healVFX);
-            player.GetComponent<ActionScheduler>().CancelCurrentAction();
+            ItemInventory itemInventory = player.GetComponent<ItemInventory>();
+            if(itemInventory.GetCurrentHPpotions() < itemInventory.GetMaxHPpotions())
+            {
+                int newQuantity = itemInventory.GetCurrentHPpotions() + 1;
+                itemInventory.SetCurrentHPpotions(newQuantity);
+                itemInventory.SetHPPotQuantity();
+            }
         }
     }
 }

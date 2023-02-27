@@ -78,7 +78,7 @@ namespace RPG.Control
                 menuController.HideUIObject(GameObject.FindObjectOfType<MenuController>().GetWeaponInventoryMenu());
             }
 
-            if(Input.GetKeyDown(KeyCode.Alpha3))
+            if(Input.GetKeyDown(KeyCode.Alpha1))
             {
                  if(itemInventory.GetCurrentHPpotions() > 0 && canHealHP) StartCoroutine("healHP");
             }
@@ -88,10 +88,6 @@ namespace RPG.Control
                  if(itemInventory.GetCurrentMPpotions() > 0 && canHealMP) StartCoroutine("healMP");
             }
 
-            {
-                Debug.Log("test");
-                if(itemInventory.GetCurrentHPpotions() > 0 && canHealHP) StartCoroutine("healHP");
-            }
             if(InteractWithMovement()) return;
         }
 
