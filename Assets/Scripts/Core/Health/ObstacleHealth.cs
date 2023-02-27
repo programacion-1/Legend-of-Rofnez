@@ -20,6 +20,7 @@ namespace RPG.Core
         
         public override void DeathBehaviour()
         {
+            Debug.Log("mori");
             audioManager.TryToPlayClip(audioManager.obstacleSources, deadClipSound);
             GetComponent<NavMeshObstacle>().enabled = false;
             Destroy(gameObject);
