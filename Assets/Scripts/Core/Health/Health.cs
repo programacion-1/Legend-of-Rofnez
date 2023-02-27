@@ -11,6 +11,7 @@ namespace RPG.Core
         [SerializeField] float healthPoints = 100f;
         [SerializeField] float maxHealthPoints = 100f;
         private bool isDead;
+        public bool isBoss;
         public bool poisoned;
         public bool isFreezed;
         float freezeLifeSpan;

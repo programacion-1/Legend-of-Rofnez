@@ -14,7 +14,7 @@ public class FreezeTrigger : MonoBehaviour
         if(other.gameObject.tag == targetToFreeze.ToString())
         {
             Health targetHealth = other.gameObject.GetComponent<Health>();
-            if(!targetHealth.CheckIfIsFreezed()) targetHealth.Freeze(freezeLifeSpan);
+            if(!targetHealth.CheckIfIsFreezed() && !targetHealth.isBoss) targetHealth.Freeze(freezeLifeSpan);
         } 
     }
 }
