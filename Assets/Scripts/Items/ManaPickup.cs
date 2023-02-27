@@ -7,14 +7,15 @@ namespace RPG.Item
 {
     public class ManaPickup : ItemPickup
     {
-        [SerializeField] float magicPointsToHeal;
-        [SerializeField] GameObject mpVFX;
-
         public override void UseItem(GameObject player)
         {
-            player.GetComponent<MagicPoints>().RestoreMagicPoints(magicPointsToHeal);
-            player.GetComponent<Health>().SpawnShader(mpVFX);
-            player.GetComponent<ActionScheduler>().CancelCurrentAction();
+            ItemInventory itemInventory = player.GetComponent<ItemInventory>();
+            if(itemInventory.GetCurrentMPpotions() < itemInventory.GetMaxMPpotions())
+            {
+                int newQuantity = itemInventory.GetCurrentMPpotions() + 1;
+                itemInventory.SetCurrentMPpotions(newQuantity);
+                itemInventory.SetMPPotQuantity();
+            }
         }
     }
 
