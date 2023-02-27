@@ -5,13 +5,12 @@ using RPG.Core;
 
 public class BuzzSawTrap : Trap
 {
-    [SerializeField] private int damage;
     [SerializeField] private Vector3 impulse;
     Animator anim;
     
     public override void UniqueStartSettings()
     {
-        anim = GetComponent<Animator>();
+        anim = GetComponentInParent<Animator>();
     }
     
     public override void TrapActivatedBehaviour()
@@ -29,19 +28,17 @@ public class BuzzSawTrap : Trap
 
     public override void TrapDeactivatedBehaviour()
     {
-        /*particle.enableEmission = false;
-        SetFireRank(1f);
-        objCollider.enabled = false;
-        StopCoroutine(waitToReactivate());*/
+        anim.SetTrigger("endTrigger");
     }
 
     public override void TrapEffect(Health target)
     {
-        //target.TakeDamage(GetTrapDamage());
+        target.TakeDamage(GetTrapDamage());
     }
 
     public override IEnumerator waitToReactivate()
     {
+        yield return null;
         /*yield return new WaitForSeconds(GetWaitTimeTrapDesactivater());
         objCollider.enabled = true;
         particle.enableEmission = true;
