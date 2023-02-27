@@ -88,7 +88,7 @@ namespace RPG.Combat
             }
 
             if(gameObject.tag == "Player") ChangeInventoryUI();
-            GetComponent<Special>().UpdateAnimatorMagicBool();
+            if(GetComponent<Special>() != null) GetComponent<Special>().UpdateAnimatorMagicBool();
         }
 
         public void ChangeInventoryUI()
