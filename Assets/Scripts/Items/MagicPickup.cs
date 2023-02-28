@@ -13,6 +13,7 @@ namespace RPG.Item
         public override void UseItem(GameObject player)
         {
             player.GetComponent<MagicInventory>().AddNewMagicToInventory(magicToAdd);
+            player.GetComponent<Special>().setCurrentMagic(magicToAdd);
         }
     }
 }

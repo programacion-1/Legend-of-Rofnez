@@ -53,6 +53,7 @@ namespace RPG.Combat
                     Rigidbody rb = hit.GetComponent<Rigidbody>();
                     if (rb != null && rb.GetComponent<Health>().GetHP() > rb.GetComponent<Health>().GetMaxHP() / 3)
                     {
+                        rb.GetComponent<Animator>().SetBool("isFloating", true);
                         rb.isKinematic = false;
                         rb.useGravity = true;
                         rb.AddExplosionForce(forcePower, forcePos, forceRadius, forceUpwardsModifier, ForceMode.VelocityChange);
@@ -76,8 +77,9 @@ namespace RPG.Combat
             {
                 foreach(Rigidbody rB in rbs)
                 {
-                rB.isKinematic = true;
-                rB.useGravity = false;
+                    rB.GetComponent<Animator>().SetBool("isFloating", false);
+                    rB.isKinematic = true;
+                    rB.useGravity = false;
                 }
                 canExplode = true;
                 rbs.Clear();
