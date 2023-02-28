@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Iceball
   m_EditorClassIdentifier: 
   magicDamage: 0
-  mpToConsume: 10
+  mpToConsume: 5
   magicCooldown: 2
   equippedPrefab: {fileID: 8095572290885335392, guid: 687ea7f8729605747ba201299f66a7ea,
     type: 3}

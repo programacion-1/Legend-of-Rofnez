@@ -4567,6 +4567,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1997565869}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6810,6 +6815,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1997565869}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7783,6 +7803,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1997565869}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10274,6 +10309,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1997565869}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11058,6 +11108,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1997565869}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16879,6 +16944,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1997565869}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21703,6 +21778,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1997565869}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23927,6 +24017,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1997565869}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25388,6 +25483,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1997565869}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26158,6 +26268,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1997565869}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867575869897842, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_IsActive
@@ -28338,6 +28463,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1997565869}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33078,6 +33213,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1997565869}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -35809,6 +35959,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1997565869}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -48761,6 +48926,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1997565869}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -53428,6 +53603,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1997565869}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -58062,6 +58252,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1997565869}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -58164,6 +58359,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1997565869}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -62110,6 +62320,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1997565869}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -63668,6 +63893,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1997565869}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -63970,6 +64210,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1997565869}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -69073,6 +69328,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1997565869}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
