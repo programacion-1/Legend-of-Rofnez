@@ -53,7 +53,7 @@ namespace RPG.Core
         {
             magicPoints = Mathf.Max(magicPoints - mpToConsume, 0);
             if(bar != null) bar.ChangeBarFiller(magicPoints, maxMagicPoints);
-            magicBarText.SetQuantityText(magicPoints, maxMagicPoints);
+            if(magicBarText != null) magicBarText.SetQuantityText(magicPoints, maxMagicPoints);
         }
 
         public void RestoreMagicPoints(float mptToRestore)

@@ -1062,6 +1062,11 @@ PrefabInstance:
       propertyPath: isAffectedByGravity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8329836164493728766, guid: 716606a900d64c24abfa70679b6e56ed,
+        type: 3}
+      propertyPath: shaderSpawnpoint
+      value: 
+      objectReference: {fileID: 1466499690001198019}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716606a900d64c24abfa70679b6e56ed, type: 3}
 --- !u!4 &6262616011493075316 stripped
