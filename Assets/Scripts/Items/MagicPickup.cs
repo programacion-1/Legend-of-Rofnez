@@ -1,19 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RPG.Core;
 using RPG.Combat;
-using RPG.Control;
 
 namespace RPG.Item
 {
-       public class MagicPickup : ItemPickup
+    public class MagicPickup : ItemPickup
     {
-        [SerializeField] Magic magic;
-        [SerializeField] int indexToAdd;
+        [SerializeField] Magic magicToAdd;
+
         public override void UseItem(GameObject player)
         {
-            player.GetComponent<MagicCollection>().AddMagic(magic, indexToAdd);
-            player.GetComponent<Special>().setCurrentMagic(magic);
+            player.GetComponent<MagicInventory>().AddNewMagicToInventory(magicToAdd);
         }
     }
 }
+

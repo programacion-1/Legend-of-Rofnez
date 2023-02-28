@@ -310,6 +310,7 @@ GameObject:
   - component: {fileID: 1968687643}
   - component: {fileID: 1968687644}
   - component: {fileID: 2256575030743231003}
+  - component: {fileID: 1042019672732648486}
   - component: {fileID: 6062337603907622159}
   m_Layer: 0
   m_Name: Player
@@ -530,6 +531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 100
   maxHealthPoints: 100
+  isBoss: 0
   poisoned: 0
   isFreezed: 0
   damagetik: 0
@@ -537,6 +539,7 @@ MonoBehaviour:
   charaRenderer: {fileID: 1071873450655753457}
   shaderSpawnpoint: {fileID: 2013218034227970706}
   freezeColor: {r: 0, g: 0.28235295, b: 1, a: 1}
+  isInvencible: 0
   audioManager: {fileID: 0}
   deadClipSound: {fileID: 8300000, guid: 1bf9ee80f2374534b80d6c5880558f5e, type: 3}
   damageClipSound: {fileID: 8300000, guid: c67b8f28ccb1a184cba5b958315fb75f, type: 3}
@@ -613,6 +616,19 @@ MonoBehaviour:
   maxMP_potions: 5
   pointsToHealMP: 20
   mpVFX: {fileID: 8375701483854294788, guid: de19cc994de0c4747bf67c8b1cb15961, type: 3}
+--- !u!114 &1042019672732648486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3810658928676046845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 004c7113976dd0041a522ce3c7182162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMagics: []
 --- !u!114 &6062337603907622159
 MonoBehaviour:
   m_ObjectHideFlags: 0

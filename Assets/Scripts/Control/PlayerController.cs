@@ -17,12 +17,14 @@ namespace RPG.Control
         Health health;
         MagicPoints magicPoints;
         WeaponInventory weaponInventory;
+        MagicInventory magicInventory;
         ItemInventory itemInventory;
         MenuController menuController;
         PlayerCursor playerCursor;
         bool GodMode;
         bool canHealHP = true;
         bool canHealMP = true;
+        int testIndex;
         private void Start()
         {
             fighter = GetComponent<Fighter>();
@@ -30,9 +32,11 @@ namespace RPG.Control
             health = GetComponent<Health>();
             magicPoints = GetComponent<MagicPoints>();
             weaponInventory = GetComponent<WeaponInventory>();
+            magicInventory = GetComponent<MagicInventory>();
             itemInventory = GetComponent<ItemInventory>();
             playerCursor = GetComponent<PlayerCursor>();
             menuController = GameObject.FindObjectOfType<MenuController>();
+            int testIndex = 0;
         }
         void Update()
         {
@@ -55,7 +59,11 @@ namespace RPG.Control
             //Test Area Begin
             if(Input.GetKeyDown(KeyCode.T))
             {
-                Debug.Log("test");           
+                testIndex++;
+                if(testIndex >= magicInventory.MagicQuantity()) testIndex = 0;
+                magicInventory.SetActiveMagic(testIndex);
+                Debug.Log("test");
+                       
             }
             //Test Area End 
             if(ActivateSpecialAttack()) return;
