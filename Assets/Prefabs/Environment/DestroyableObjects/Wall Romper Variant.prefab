@@ -44,6 +44,7 @@ MonoBehaviour:
   healthPoints: 10
   maxHealthPoints: 10
   isBoss: 0
+  isAffectedByGravity: 0
   poisoned: 0
   isFreezed: 0
   damagetik: 0
@@ -51,10 +52,11 @@ MonoBehaviour:
   charaRenderer: {fileID: 0}
   shaderSpawnpoint: {fileID: 0}
   freezeColor: {r: 0, g: 0, b: 0, a: 0}
+  isInvencible: 0
   audioManager: {fileID: 0}
-  deadClipSound: {fileID: 0}
-  damageClipSound: {fileID: 0}
-  impactClipSound: {fileID: 0}
+  deadClipSound: {fileID: 8300000, guid: 59da0ad043828c446b7a2acc7524d008, type: 3}
+  damageClipSound: {fileID: 8300000, guid: 35ea60cc5be64c24cbb54146158b100d, type: 3}
+  impactClipSound: {fileID: 8300000, guid: 35ea60cc5be64c24cbb54146158b100d, type: 3}
   poisonClipSound: {fileID: 0}
   shieldClipSound: {fileID: 0}
 --- !u!114 &1192959296

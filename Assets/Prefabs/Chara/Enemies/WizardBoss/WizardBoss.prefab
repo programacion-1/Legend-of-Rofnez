@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageToDeal: 20
+  attackType: 2
 --- !u!1 &1658050550
 GameObject:
   m_ObjectHideFlags: 0

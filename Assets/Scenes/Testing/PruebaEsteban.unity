@@ -154,6 +154,7 @@ MonoBehaviour:
   healthPoints: 20
   maxHealthPoints: 20
   isBoss: 0
+  isAffectedByGravity: 0
   poisoned: 0
   isFreezed: 0
   damagetik: 0
@@ -1090,6 +1091,7 @@ MonoBehaviour:
   healthPoints: 20
   maxHealthPoints: 20
   isBoss: 0
+  isAffectedByGravity: 0
   poisoned: 0
   isFreezed: 0
   damagetik: 0
@@ -3457,18 +3459,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 9044739826088954919, guid: 3838801d88faf2d48bea2ea8264b9859,
-        type: 3}
-      propertyPath: defaultShield
-      value: 
-      objectReference: {fileID: 11400000, guid: 15b3ff053c8171c46915e3cb2d7fe10a,
-        type: 2}
-    - target: {fileID: 9044739826088954919, guid: 3838801d88faf2d48bea2ea8264b9859,
-        type: 3}
-      propertyPath: defaultWeapon
-      value: 
-      objectReference: {fileID: 11400000, guid: 085adc1ed40213e45a1d18856ba4be85,
-        type: 2}
     - target: {fileID: 9044739826088954939, guid: 3838801d88faf2d48bea2ea8264b9859,
         type: 3}
       propertyPath: m_Name
@@ -3938,6 +3928,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 926385994999591233, guid: a077d91f17da4094ea48d1685ab37fb4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.9001465
+      objectReference: {fileID: 0}
     - target: {fileID: 2046674208335243576, guid: a077d91f17da4094ea48d1685ab37fb4,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -4001,7 +3996,7 @@ PrefabInstance:
     - target: {fileID: 3207946647551564142, guid: a077d91f17da4094ea48d1685ab37fb4,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -371.9995
+      value: -371.99902
       objectReference: {fileID: 0}
     - target: {fileID: 4383947511714867162, guid: a077d91f17da4094ea48d1685ab37fb4,
         type: 3}

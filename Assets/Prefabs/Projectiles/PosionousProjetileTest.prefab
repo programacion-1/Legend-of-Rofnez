@@ -129,3 +129,4 @@ MonoBehaviour:
   lifeSpan: 1
   impactClip: {fileID: 8300000, guid: 884e3f10ab8b2574baf8bdee4f8f3f62, type: 3}
   launchClip: {fileID: 8300000, guid: 716cea4d9ecea8b478d82edddc2450fe, type: 3}
+  attackType: 1
