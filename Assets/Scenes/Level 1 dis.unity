@@ -2377,6 +2377,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 674999144}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5672,27 +5687,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MeshFormatVersion: 0
-  m_Faces: []
-  m_SharedVertices: []
-  m_SharedTextures: []
-  m_Positions: []
-  m_Textures0: []
-  m_Textures2: []
-  m_Textures3: []
-  m_Tangents: []
-  m_Colors: []
-  m_UnwrapParameters:
-    m_HardAngle: 88
-    m_PackMargin: 20
-    m_AngleError: 8
-    m_AreaError: 15
-  m_PreserveMeshAssetOnDestroy: 0
-  assetGuid: 
-  m_IsSelectable: 1
-  m_SelectedFaces: 
-  m_SelectedEdges: []
-  m_SelectedVertices: 
 --- !u!23 &124424065
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13225,6 +13219,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 674999144}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13545,6 +13554,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 674999144}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -34950,6 +34974,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 674999144}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -49743,6 +49777,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 674999144}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -63485,7 +63534,7 @@ PrefabInstance:
     - target: {fileID: 8016813167046956759, guid: 52471393e00672b4abb9679928fb5aad,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -63.094658
+      value: -51.15
       objectReference: {fileID: 0}
     - target: {fileID: 8016813167046956759, guid: 52471393e00672b4abb9679928fb5aad,
         type: 3}
@@ -63495,7 +63544,7 @@ PrefabInstance:
     - target: {fileID: 8016813167046956759, guid: 52471393e00672b4abb9679928fb5aad,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 52.866898
+      value: 64.92
       objectReference: {fileID: 0}
     - target: {fileID: 8016813167046956759, guid: 52471393e00672b4abb9679928fb5aad,
         type: 3}
@@ -86233,6 +86282,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 674999144}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: time
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -96368,6 +96432,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 674999144}
     m_Modifications:
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: waitTimeTrapDesactivater
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193751429792526929, guid: a46a31f2fc03ece4fb0149d3e9dae976,
+        type: 3}
+      propertyPath: trapDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6278867576472954872, guid: a46a31f2fc03ece4fb0149d3e9dae976,
         type: 3}
       propertyPath: m_LocalPosition.x
