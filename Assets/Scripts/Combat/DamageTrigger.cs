@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using RPG.Core;
+using CombatEnums;
 
 namespace RPG.Combat
 {
@@ -13,7 +14,7 @@ namespace RPG.Combat
         {
             if(other.gameObject.tag == "Player")
             {
-                other.GetComponent<Health>().TakeDamage(damageToDeal);
+                other.GetComponent<Health>().TakeDamage(damageToDeal, AttackType.Special);
             }    
         }
         

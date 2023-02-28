@@ -532,6 +532,7 @@ MonoBehaviour:
   healthPoints: 100
   maxHealthPoints: 100
   isBoss: 0
+  isAffectedByGravity: 1
   poisoned: 0
   isFreezed: 0
   damagetik: 0

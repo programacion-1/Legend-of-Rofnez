@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using RPG.Combat;
+using CombatEnums;
 
 namespace RPG.Core
 {
@@ -12,6 +13,7 @@ namespace RPG.Core
         [SerializeField] float maxHealthPoints = 100f;
         private bool isDead;
         public bool isBoss;
+        public bool isAffectedByGravity;
         public bool poisoned;
         public bool isFreezed;
         float freezeLifeSpan;
@@ -58,7 +60,7 @@ namespace RPG.Core
             charaRenderer.material.color = color;
         }
 
-        public void TakeDamage(float damage)
+        public void TakeDamage(float damage, AttackType attackType)
         {
             //Antes de recibir daño, chequeo si puedo deflectar el daño en el caso de tener un escudo equipado
             if(!isDead && !isInvencible)
@@ -71,18 +73,27 @@ namespace RPG.Core
                 {
                     if(damage > 0)
                     {
-                        if (GetComponent<Fighter>().GetCurrentShield() != null)
+                        switch (attackType)
                         {
-                            if (!GetComponent<Fighter>().GetCurrentShield().DeflectDamage())
-                            {
+                            case AttackType.Weapon:
+                                if (GetComponent<Fighter>().GetCurrentShield() != null)
+                                {
+                                    if (!CheckIfIsFreezed()) 
+                                    {
+                                        if(!GetComponent<Fighter>().GetCurrentShield().DeflectDamage())DamageBehavoiur(damage);
+                                    }
+                                    else
+                                    {
+                                        audioManager.TryToPlayClip(audioManager.PlayerSFXSources, shieldClipSound);
+                                    }
+                                }
+                                else DamageBehavoiur(damage);
+                                return;
+
+                            default:
                                 DamageBehavoiur(damage);
-                            }
-                            else
-                            {
-                                audioManager.TryToPlayClip(audioManager.PlayerSFXSources, shieldClipSound);
-                            }
+                                return;
                         }
-                        else DamageBehavoiur(damage);
                     }                    
                 }
             }
@@ -142,7 +153,7 @@ namespace RPG.Core
             for(int i = 0; i < damagetik; i++)
             {
                 yield return new WaitForSeconds(1f);
-                TakeDamage(poisonDamage);
+                TakeDamage(poisonDamage, AttackType.Special);
 
             }
             poisoned = false;

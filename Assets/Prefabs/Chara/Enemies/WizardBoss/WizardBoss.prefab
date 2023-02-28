@@ -700,6 +700,7 @@ MonoBehaviour:
   healthPoints: 250
   maxHealthPoints: 250
   isBoss: 1
+  isAffectedByGravity: 0
   poisoned: 0
   isFreezed: 0
   damagetik: 0
@@ -707,6 +708,7 @@ MonoBehaviour:
   charaRenderer: {fileID: 0}
   shaderSpawnpoint: {fileID: 1466499690001198019}
   freezeColor: {r: 0, g: 0, b: 0, a: 0}
+  isInvencible: 0
   audioManager: {fileID: 0}
   deadClipSound: {fileID: 8300000, guid: 3aa8b26622ee8e74895db604c5342b2b, type: 3}
   damageClipSound: {fileID: 8300000, guid: 2ebf38d5081e6024eb5214ce611bd747, type: 3}
@@ -1054,6 +1056,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 7292434bea221804c82a785b1d192b91, type: 2}
+    - target: {fileID: 8329836164493728766, guid: 716606a900d64c24abfa70679b6e56ed,
+        type: 3}
+      propertyPath: isAffectedByGravity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716606a900d64c24abfa70679b6e56ed, type: 3}
 --- !u!4 &6262616011493075316 stripped

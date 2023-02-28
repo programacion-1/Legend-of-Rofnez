@@ -18,4 +18,11 @@ namespace CombatEnums
         Player,
         Enemy
     }
+
+    public enum AttackType
+    {
+        Weapon,
+        Magic,
+        Special
+    }
 }

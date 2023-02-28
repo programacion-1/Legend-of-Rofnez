@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using RPG.UI;
 using RPG.Combat;
+using CombatEnums;
 
 namespace RPG.Core
 {
@@ -53,7 +54,7 @@ namespace RPG.Core
             {
                 if (!CheckInvencibility())
                 {
-                    TakeDamage(other.transform.parent.GetComponent<AttackTrigger>().GetTriggerDamage());
+                    TakeDamage(other.transform.parent.GetComponent<AttackTrigger>().GetTriggerDamage(), AttackType.Weapon);
                     SetInvencibility(true);
                     StartCoroutine(DisableInvencibilityCo(0.5f));
                 }

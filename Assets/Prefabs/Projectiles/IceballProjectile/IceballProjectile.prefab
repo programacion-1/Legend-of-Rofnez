@@ -312,6 +312,7 @@ MonoBehaviour:
   lifeSpan: 1
   impactClip: {fileID: 8300000, guid: da0093ebe4323b846a8f67e40229df09, type: 3}
   launchClip: {fileID: 8300000, guid: 14a12d2846061f74f8d8793806f0a966, type: 3}
+  attackType: 1
 --- !u!65 &1146021769943624775
 BoxCollider:
   m_ObjectHideFlags: 0

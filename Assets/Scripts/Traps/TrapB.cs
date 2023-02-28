@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using RPG.Core;
+using CombatEnums;
 
 public class TrapB : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class TrapB : MonoBehaviour
             Rigidbody playerForse = other.GetComponent<Rigidbody>();
             playerForse.AddForce(impulse, ForceMode.Impulse);
             Health player = other.GetComponent<Health>();
-            player.TakeDamage(20);
+            player.TakeDamage(20, AttackType.Special);
             Debug.Log(impulse);
 
 

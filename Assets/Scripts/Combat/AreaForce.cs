@@ -48,7 +48,7 @@ namespace RPG.Combat
         {
             foreach(Collider hit in colliders)
             {
-                if(hit.tag == target && !hit.GetComponent<Health>().isBoss)
+                if(hit.tag == target && hit.GetComponent<Health>().isAffectedByGravity)
                 {
                     Rigidbody rb = hit.GetComponent<Rigidbody>();
                     if (rb != null && rb.GetComponent<Health>().GetHP() > rb.GetComponent<Health>().GetMaxHP() / 3)

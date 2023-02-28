@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using RPG.Core;
+using CombatEnums;
 
 public class FireTrap : Trap
 {
@@ -37,7 +38,7 @@ public class FireTrap : Trap
 
     public override void TrapEffect(Health target)
     {
-        target.TakeDamage(GetTrapDamage());
+        target.TakeDamage(GetTrapDamage(), AttackType.Special);
     }
 
     public override IEnumerator waitToReactivate()

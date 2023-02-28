@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magicClip: {fileID: 8300000, guid: be04e3f4e348d08438b4ce2e92a586d2, type: 3}
+  attackType: 1
 --- !u!1 &2595426377215174904
 GameObject:
   m_ObjectHideFlags: 0

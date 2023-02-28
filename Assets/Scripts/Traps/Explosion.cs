@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using RPG.Core;
+using CombatEnums;
 
 public class Explosion : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class Explosion : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            other.GetComponent<Health>().TakeDamage(explosionDamage);
+            other.GetComponent<Health>().TakeDamage(explosionDamage, AttackType.Special);
         }
     }
 }

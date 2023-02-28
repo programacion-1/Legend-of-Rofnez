@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using RPG.Core;
+using CombatEnums;
 
 public class Projectile : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Projectile : MonoBehaviour
     AudioManager audioManager;
     public AudioClip impactClip;
     public AudioClip launchClip;
+    public AttackType attackType;
     
     private void Start()
     {
@@ -51,7 +53,7 @@ public class Projectile : MonoBehaviour
         bool canBeDestroyed = false;
         if(other.gameObject == target.gameObject)
         {
-            if(!target.IsDead() && !target.CheckInvencibility()) target.TakeDamage(damage);
+            if(!target.IsDead() && !target.CheckInvencibility()) target.TakeDamage(damage, attackType);
             canBeDestroyed = ImpactEffect();
         }
         else if(other.gameObject.tag == "Prop" || other.gameObject.tag == "DestroyableObstacle")
