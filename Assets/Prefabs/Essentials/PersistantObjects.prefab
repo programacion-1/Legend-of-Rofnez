@@ -127,6 +127,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2658511079991243496}
     m_Modifications:
+    - target: {fileID: 888490247, guid: 0cfff02477e1556418b7bc88f7524fe9, type: 3}
+      propertyPath: m_Name
+      value: VidaCantidad
+      objectReference: {fileID: 0}
+    - target: {fileID: 888490249, guid: 0cfff02477e1556418b7bc88f7524fe9, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c69afb6dafb947c45a23951858722157,
+        type: 3}
+    - target: {fileID: 888490249, guid: 0cfff02477e1556418b7bc88f7524fe9, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 888490249, guid: 0cfff02477e1556418b7bc88f7524fe9, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699086806, guid: 0cfff02477e1556418b7bc88f7524fe9, type: 3}
+      propertyPath: m_Name
+      value: ManaCantidad
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699086808, guid: 0cfff02477e1556418b7bc88f7524fe9, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: c69afb6dafb947c45a23951858722157,
+        type: 3}
+    - target: {fileID: 1699086808, guid: 0cfff02477e1556418b7bc88f7524fe9, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 440932633807670982, guid: 0cfff02477e1556418b7bc88f7524fe9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 858745066657326749, guid: 0cfff02477e1556418b7bc88f7524fe9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -24.940918
+      objectReference: {fileID: 0}
     - target: {fileID: 1349910666415691002, guid: 0cfff02477e1556418b7bc88f7524fe9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -187,6 +227,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: UICanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2703685713426702077, guid: 0cfff02477e1556418b7bc88f7524fe9,
+        type: 3}
+      propertyPath: HealthPotQuantityText
+      value: 
+      objectReference: {fileID: 5264256414072731459}
+    - target: {fileID: 2703685713426702077, guid: 0cfff02477e1556418b7bc88f7524fe9,
+        type: 3}
+      propertyPath: MagicPotQuantityText
+      value: 
+      objectReference: {fileID: 5264256414868782994}
+    - target: {fileID: 2764328198512524229, guid: 0cfff02477e1556418b7bc88f7524fe9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6355285696716827068, guid: 0cfff02477e1556418b7bc88f7524fe9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cfff02477e1556418b7bc88f7524fe9, type: 3}
 --- !u!4 &6608396696498137776 stripped
@@ -195,3 +255,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5264256413203775050}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5264256414072731459 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 888490249, guid: 0cfff02477e1556418b7bc88f7524fe9,
+    type: 3}
+  m_PrefabInstance: {fileID: 5264256413203775050}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5264256414868782994 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1699086808, guid: 0cfff02477e1556418b7bc88f7524fe9,
+    type: 3}
+  m_PrefabInstance: {fileID: 5264256413203775050}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
