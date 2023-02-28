@@ -16,17 +16,17 @@ PrefabInstance:
     - target: {fileID: 540004773825614256, guid: 78698cf7a23a12347a02382a2e58bf96,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.377876
+      value: 5.829279
       objectReference: {fileID: 0}
     - target: {fileID: 540004773825614256, guid: 78698cf7a23a12347a02382a2e58bf96,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.6096325
+      value: 11.61702
       objectReference: {fileID: 0}
     - target: {fileID: 540004773825614256, guid: 78698cf7a23a12347a02382a2e58bf96,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.9905205
+      value: 4.2880907
       objectReference: {fileID: 0}
     - target: {fileID: 540004773825614256, guid: 78698cf7a23a12347a02382a2e58bf96,
         type: 3}
@@ -78,16 +78,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Archer
       objectReference: {fileID: 0}
-    - target: {fileID: 540004773825614262, guid: 78698cf7a23a12347a02382a2e58bf96,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3428849089670857681, guid: 78698cf7a23a12347a02382a2e58bf96,
-        type: 3}
-      propertyPath: dropRate
-      value: 40
-      objectReference: {fileID: 0}
     - target: {fileID: 3428849089670857681, guid: 78698cf7a23a12347a02382a2e58bf96,
         type: 3}
       propertyPath: rewardToDrop
@@ -104,26 +94,15 @@ PrefabInstance:
       propertyPath: chaseDistance
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 6695560333957209406, guid: 78698cf7a23a12347a02382a2e58bf96,
-        type: 3}
-      propertyPath: renderer
-      value: 
-      objectReference: {fileID: 4142125749352534891}
-    - target: {fileID: 8212890988055871080, guid: 78698cf7a23a12347a02382a2e58bf96,
+    - target: {fileID: 6731260656246018596, guid: 78698cf7a23a12347a02382a2e58bf96,
         type: 3}
       propertyPath: healthPoints
       value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 8212890988055871080, guid: 78698cf7a23a12347a02382a2e58bf96,
+    - target: {fileID: 6731260656246018596, guid: 78698cf7a23a12347a02382a2e58bf96,
         type: 3}
       propertyPath: maxHealthPoints
       value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78698cf7a23a12347a02382a2e58bf96, type: 3}
---- !u!137 &4142125749352534891 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 3529686434512483210, guid: 78698cf7a23a12347a02382a2e58bf96,
-    type: 3}
-  m_PrefabInstance: {fileID: 684615794663465185}
-  m_PrefabAsset: {fileID: 0}
