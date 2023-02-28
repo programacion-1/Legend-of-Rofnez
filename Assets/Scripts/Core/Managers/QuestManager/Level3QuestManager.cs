@@ -7,8 +7,8 @@ namespace RPG.Core
     public class Level3QuestManager : QuestManager
     {
         [SerializeField] SiegeTowerBossHealth boss;
-        GameObject bossHealthBar;
-        BridgeObstacle bridgeObstacle;
+        public GameObject bossHealthBar;
+        public BridgeObstacle bridgeObstacle;
         
         public override void LevelStartingSettings()
         {
