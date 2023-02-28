@@ -79,8 +79,7 @@ public abstract class Trap : MonoBehaviour
         else
         {
             TrapDeactivatedBehaviour();
-        }
-        
+        }       
     }
 
     //Abstract Classes

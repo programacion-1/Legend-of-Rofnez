@@ -6,31 +6,37 @@ using RPG.Core;
 public class TrapPinchos : Trap
 {
     private Animator Anim;
+    [SerializeField] string animIsAttackingBoolVar;
+    [SerializeField] string animAttackTriggerVar;
+    [SerializeField] string animIsEnabledBoolVar;
+    bool isActive;
     public override void UniqueStartSettings()
     {
          Anim = GetComponent<Animator>();
-         SetTriggerOn();
+         Anim.SetBool(animIsEnabledBoolVar,true);
+         isActive = false;
     }
-    void FixedUpdate() 
-    {
-  
-    }
+
     public override void TrapActivatedBehaviour()
     {
-        Anim.SetBool("IsAtacking",true);
-        Anim.SetTrigger("AttackTriger");
+        if(!isActive) StartCoroutine("waitToReactivate");
     }
     public override void TrapDeactivatedBehaviour()
     {
-        Anim.SetBool("IsAtacking",false);
+        Anim.SetBool(animIsEnabledBoolVar,false);
     }
     public override void TrapEffect(Health target)
     {
-        
+        target.TakeDamage(GetTrapDamage());
     }
     public override IEnumerator waitToReactivate()
     {
+        isActive = true;
+        Anim.SetBool(animIsAttackingBoolVar,true);
+        Anim.SetTrigger(animAttackTriggerVar);
         yield return new WaitForSeconds(GetWaitTimeTrapDesactivater());
-        TrapActivatedBehaviour();
+        Anim.SetBool(animIsAttackingBoolVar,false);
+        Anim.ResetTrigger(animAttackTriggerVar);
+        isActive = false;
     }
 }

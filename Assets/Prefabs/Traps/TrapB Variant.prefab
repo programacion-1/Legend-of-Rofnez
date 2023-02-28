@@ -16,7 +16,9 @@ MonoBehaviour:
   waitTimeTrapDesactivater: 5
   trapDamage: 10
   onOffTrigger: 0
-  Pinchos: {fileID: 435262578367464172}
+  animIsAttackingBoolVar: IsAtacking
+  animAttackTriggerVar: AttackTriger
+  animIsEnabledBoolVar: isEnabled
 --- !u!1001 &8148391548773335846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37,7 +39,7 @@ PrefabInstance:
     - target: {fileID: 8583504593457005398, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
         type: 3}
       propertyPath: m_Name
-      value: TrapB Variant (7)
+      value: TrapB Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8583504593457005398, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
         type: 3}
@@ -52,17 +54,17 @@ PrefabInstance:
     - target: {fileID: 8583504593457418896, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -62.4
+      value: 9.24
       objectReference: {fileID: 0}
     - target: {fileID: 8583504593457418896, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7458315
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 8583504593457418896, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.8500032
+      value: 18.355423
       objectReference: {fileID: 0}
     - target: {fileID: 8583504593457418896, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
         type: 3}
@@ -114,12 +116,6 @@ PrefabInstance:
 --- !u!1 &435262578367545456 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8583504593457005398, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
-    type: 3}
-  m_PrefabInstance: {fileID: 8148391548773335846}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &435262578367464172 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8583504593457185226, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
     type: 3}
   m_PrefabInstance: {fileID: 8148391548773335846}
   m_PrefabAsset: {fileID: 0}
