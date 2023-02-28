@@ -81,11 +81,12 @@ namespace RPG.Core
                                     if (!CheckIfIsFreezed()) 
                                     {
                                         if(!GetComponent<Fighter>().GetCurrentShield().DeflectDamage())DamageBehavoiur(damage);
+                                        else
+                                        {
+                                            audioManager.TryToPlayClip(audioManager.PlayerSFXSources, shieldClipSound);
+                                        }
                                     }
-                                    else
-                                    {
-                                        audioManager.TryToPlayClip(audioManager.PlayerSFXSources, shieldClipSound);
-                                    }
+                                    else DamageBehavoiur(damage);
                                 }
                                 else DamageBehavoiur(damage);
                                 return;

@@ -18,3 +18,4 @@ MonoBehaviour:
   equippedPrefab: {fileID: 2331271551912489652, guid: 571d0c0c0c73d8f4fa94220a8c735234,
     type: 3}
   magicType: 1
+  magicSprite: {fileID: 21300000, guid: 2076fa60a73803145b4b171ee19b4b3e, type: 3}

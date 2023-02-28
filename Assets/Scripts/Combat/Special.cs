@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using RPG.Core;
+using RPG.UI;
 using CombatEnums;
 
 namespace RPG.Combat
@@ -18,12 +19,18 @@ namespace RPG.Combat
 
         float timeToActivateMagic = Mathf.Infinity;
         private Health specialTarget;
+        MagicInventoryMenu magicInventoryMenu;
 
         void Start()
         {
             anim = GetComponent<Animator>();
             magicPoints = GetComponent<MagicPoints>();
+            magicInventoryMenu = GameObject.FindObjectOfType<MagicInventoryMenu>();
             setCurrentMagic(defaultMagic);
+            if(gameObject.tag == "Player")
+            {
+                
+            }
         }
 
         protected void Update()

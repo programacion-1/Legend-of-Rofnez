@@ -10,6 +10,9 @@ namespace RPG.Core
     public class PlayerHealth : Health
     {
         HealBar bar;
+        [SerializeField] string healthBarName;
+        PlayerMinMaxQuantityText healthText;
+        [SerializeField] string healthBarTextName;
 
         public void SetStartingHealthSettings()
         {
@@ -17,9 +20,18 @@ namespace RPG.Core
             HealBar[] healbars = GameObject.FindObjectsOfType<HealBar>();
             for (int i = 0; i < healbars.Length; i++)
             {
-                if (healbars[i].gameObject.name == "Health")
+                if (healbars[i].gameObject.name == healthBarName)
                 {
                     bar = healbars[i];
+                    break;
+                }
+            }
+            PlayerMinMaxQuantityText[] playerMinMaxQuantityTexts = GameObject.FindObjectsOfType<PlayerMinMaxQuantityText>();
+            for (int i = 0; i < playerMinMaxQuantityTexts.Length; i++)
+            {
+                if (playerMinMaxQuantityTexts[i].gameObject.name == healthBarTextName)
+                {
+                    healthText = playerMinMaxQuantityTexts[i];
                     break;
                 }
             }
@@ -29,6 +41,7 @@ namespace RPG.Core
         public override void ShowVisualChanges()
         {
             bar.ChangeBarFiller(GetHP(), GetMaxHP());
+            healthText.SetQuantityText(GetHP(), GetMaxHP());
         }
 
         public override void DeathBehaviour()

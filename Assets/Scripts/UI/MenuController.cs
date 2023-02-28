@@ -10,6 +10,7 @@ namespace RPG.UI
         [SerializeField] GameObject fader;
         [SerializeField] GameObject weaponInventoryMenu;
         [SerializeField] GameObject currentWeaponActive;
+        [SerializeField] GameObject currentMagicActive;
         [SerializeField] GameObject ammoText;
         [SerializeField] GameObject godModeText;
         [SerializeField] GameObject hpPotQuantityText;
@@ -33,6 +34,11 @@ namespace RPG.UI
         public GameObject GetCurrentWeaponActive()
         {
             return currentWeaponActive;
+        }
+
+        public GameObject GetCurrentMagicActive()
+        {
+            return currentMagicActive;
         }
 
         public GameObject GetAmmoText()

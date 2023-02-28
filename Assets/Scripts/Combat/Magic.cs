@@ -52,5 +52,10 @@ namespace RPG.Combat
         {
             return magicType;
         }
+
+        public Sprite GetMagicSprite()
+        {
+            return magicSprite;
+        }
     }
 }

@@ -17,5 +17,5 @@ MonoBehaviour:
   magicCooldown: 1.25
   equippedPrefab: {fileID: 8095572290885335392, guid: dc7277f3cbd4d8e4e883ce2318b3d084,
     type: 3}
-  animatorOverride: {fileID: 22100000, guid: 2d98bb1ef45e7544baeec407999480b1, type: 2}
   magicType: 0
+  magicSprite: {fileID: 21300000, guid: d83b84cbe8abd5c41b57ff7130ed70d1, type: 3}

@@ -10,6 +10,9 @@ namespace RPG.Core
         [SerializeField] float magicPoints;
         [SerializeField] float maxMagicPoints;
         HealBar bar;
+        [SerializeField] string magicBarName;
+        PlayerMinMaxQuantityText magicBarText;
+        [SerializeField] string magicBarTextName;
         // Start is called before the first frame update
         void Start()
         {
@@ -22,13 +25,23 @@ namespace RPG.Core
             HealBar[] healbars = GameObject.FindObjectsOfType<HealBar>();
             for(int i = 0; i < healbars.Length; i++)
             {
-                if(healbars[i].gameObject.name == "Magic")
+                if(healbars[i].gameObject.name == magicBarName)
                 {
                     bar = healbars[i];
                     break;
                 }
             }
+            PlayerMinMaxQuantityText[] playerMinMaxQuantityTexts = GameObject.FindObjectsOfType<PlayerMinMaxQuantityText>();
+            for (int i = 0; i < playerMinMaxQuantityTexts.Length; i++)
+            {
+                if (playerMinMaxQuantityTexts[i].gameObject.name == magicBarTextName)
+                {
+                    magicBarText = playerMinMaxQuantityTexts[i];
+                    break;
+                }
+            }
             bar.ChangeBarFiller(magicPoints, maxMagicPoints);
+            magicBarText.SetQuantityText(magicPoints, maxMagicPoints);
         }
 
         public float GetMagicPoints()
@@ -40,6 +53,7 @@ namespace RPG.Core
         {
             magicPoints = Mathf.Max(magicPoints - mpToConsume, 0);
             if(bar != null) bar.ChangeBarFiller(magicPoints, maxMagicPoints);
+            magicBarText.SetQuantityText(magicPoints, maxMagicPoints);
         }
 
         public void RestoreMagicPoints(float mptToRestore)
