@@ -84,7 +84,6 @@ namespace RPG.Combat
                 canExplode = true;
                 rbs.Clear();
             }
-        }
-        
+        }        
     }
 }
