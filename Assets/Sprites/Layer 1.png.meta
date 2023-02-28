@@ -1,16 +1,7 @@
 fileFormatVersion: 2
-guid: f07cb11609946af42a6a11e8f3a92d31
+guid: 2076fa60a73803145b4b171ee19b4b3e
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -3017006903589583093
-    second: espada y arco_0
-  - first:
-      213: -1554699554799985314
-    second: espada y arco_1
-  - first:
-      213: 2204436053738639061
-    second: espada y arco_2
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +31,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -49,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -105,70 +96,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: espada y arco_0
-      rect:
-        serializedVersion: 2
-        x: 771
-        y: 1316
-        width: 1690
-        height: 2164
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b32e817d28ac09046aee14ceafae708a
-      internalID: -3017006903589583093
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: espada y arco_1
-      rect:
-        serializedVersion: 2
-        x: 3320
-        y: 1242
-        width: 1906
-        height: 2257
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3717dda73500a80428ca2e2da4b143cc
-      internalID: -1554699554799985314
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: espada y arco_2
-      rect:
-        serializedVersion: 2
-        x: 4826
-        y: 126
-        width: 10
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8af548de23a3f5343948b22ac18bcd80
-      internalID: 2204436053738639061
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
