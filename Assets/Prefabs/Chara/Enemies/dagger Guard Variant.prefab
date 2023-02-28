@@ -84,6 +84,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 74154475075467199, guid: c540adee0a94bef48b1ea3adcd818be7,
         type: 3}
+    - target: {fileID: 4020652134336385471, guid: 78698cf7a23a12347a02382a2e58bf96,
+        type: 3}
+      propertyPath: chaseDistance
+      value: 7.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8212890988055871080, guid: 78698cf7a23a12347a02382a2e58bf96,
         type: 3}
       propertyPath: impactClipSound

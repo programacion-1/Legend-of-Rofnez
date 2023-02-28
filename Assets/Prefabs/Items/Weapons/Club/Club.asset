@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Club
   m_EditorClassIdentifier: 
   weaponRange: 1.5
-  weaponDamage: 20
+  weaponDamage: 12.5
   timeBetweenAttacks: 1.5
   equippedPrefab: {fileID: 7549051083786947283, guid: 456afded84e803d43b5effdb885d4b6e,
     type: 3}
-  animatorOverride: {fileID: 22100000, guid: 8e030bc255f368349bda76646a9c969e, type: 2}
+  animatorOverride: {fileID: 22100000, guid: a3067f663ca4cf04c9770e1330679ce3, type: 2}
   isRightHanded: 1
   projectile: {fileID: 0}
   ammo: 0
