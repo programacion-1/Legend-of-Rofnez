@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &5074035596275085730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435262578367545456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5af84b4b42efb864e908f010eb7a2aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 2
+  waitTimeTrapDesactivater: 5
+  trapDamage: 10
+  onOffTrigger: 0
+  Pinchos: {fileID: 435262578367464172}
 --- !u!1001 &8148391548773335846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7,16 +24,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 600525996285661865, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
-        type: 3}
-      propertyPath: impulse.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 600525996285661865, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
-        type: 3}
-      propertyPath: impulse.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 600525996285661865, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
         type: 3}
       propertyPath: damage
@@ -27,45 +34,50 @@ PrefabInstance:
       propertyPath: impulse.z
       value: 100000
       objectReference: {fileID: 0}
-    - target: {fileID: 2659418044117136257, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8583504593457005398, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
         type: 3}
       propertyPath: m_Name
-      value: TrapB
+      value: TrapB Variant (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8583504593457005398, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8583504593457185226, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8583504593457418896, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.9154
+      value: -62.4
       objectReference: {fileID: 0}
     - target: {fileID: 8583504593457418896, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.10986996
+      value: -0.7458315
       objectReference: {fileID: 0}
     - target: {fileID: 8583504593457418896, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.520241
+      value: 6.8500032
       objectReference: {fileID: 0}
     - target: {fileID: 8583504593457418896, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8583504593457418896, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8583504593457418896, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8583504593457418896, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
         type: 3}
@@ -92,5 +104,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8583504593457418896, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0748
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dac3bdb1c26b9284eb6a46f49c62ccfb, type: 3}
+--- !u!1 &435262578367545456 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8583504593457005398, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 8148391548773335846}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &435262578367464172 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8583504593457185226, guid: dac3bdb1c26b9284eb6a46f49c62ccfb,
+    type: 3}
+  m_PrefabInstance: {fileID: 8148391548773335846}
+  m_PrefabAsset: {fileID: 0}
