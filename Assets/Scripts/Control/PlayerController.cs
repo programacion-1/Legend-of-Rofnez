@@ -24,7 +24,7 @@ namespace RPG.Control
         bool GodMode;
         bool canHealHP = true;
         bool canHealMP = true;
-        int testIndex;
+        int magicIndex;
         private void Start()
         {
             fighter = GetComponent<Fighter>();
@@ -36,7 +36,7 @@ namespace RPG.Control
             itemInventory = GetComponent<ItemInventory>();
             playerCursor = GetComponent<PlayerCursor>();
             menuController = GameObject.FindObjectOfType<MenuController>();
-            int testIndex = 0;
+            magicIndex = 0;
         }
         void Update()
         {
@@ -59,11 +59,7 @@ namespace RPG.Control
             //Test Area Begin
             if(Input.GetKeyDown(KeyCode.T))
             {
-                testIndex++;
-                if(testIndex >= magicInventory.MagicQuantity()) testIndex = 0;
-                magicInventory.SetActiveMagic(testIndex);
                 Debug.Log("test");
-                       
             }
             //Test Area End 
             if(ActivateSpecialAttack()) return;
@@ -73,6 +69,11 @@ namespace RPG.Control
             {
                 ChangePlayerActiveWeapon();
                 return;
+            }
+
+            if(Input.GetKeyDown(KeyCode.W))
+            {
+                ChangePlayerActiveMagic();
             }
 
             if(Input.GetKeyDown(KeyCode.Tab))
@@ -192,6 +193,13 @@ namespace RPG.Control
                 else fighter.HideShield();
             }
             special.UpdateAnimatorMagicBool();
+        }
+
+        private void ChangePlayerActiveMagic()
+        {
+            magicIndex++;
+            if(magicIndex >= magicInventory.MagicQuantity()) magicIndex = 0;
+            magicInventory.SetActiveMagic(magicIndex);
         }
 
         private bool CheckRaycastTags(RaycastHit hitPoint)
