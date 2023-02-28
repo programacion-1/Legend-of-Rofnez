@@ -1067,7 +1067,8 @@ PrefabInstance:
       propertyPath: shaderSpawnpoint
       value: 
       objectReference: {fileID: 1466499690001198019}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8329836164493728766, guid: 716606a900d64c24abfa70679b6e56ed, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 716606a900d64c24abfa70679b6e56ed, type: 3}
 --- !u!4 &6262616011493075316 stripped
 Transform:

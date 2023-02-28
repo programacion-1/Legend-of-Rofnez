@@ -35,6 +35,7 @@ namespace RPG.Core
                     break;
                 }
             }
+            ShowVisualChanges();
         }
 
         public bool CheckIfICanDoATornadoMovement()

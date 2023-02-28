@@ -157,7 +157,7 @@ MonoBehaviour:
   - 0.75
   - 0.5
   shieldField: {fileID: 86946953}
-  crystalPercentages: 230000001e00000019000000
+  crystalPercentages: 2d000000280000001e000000
   fireClip: {fileID: 0}
   shieldClip: {fileID: 0}
 --- !u!114 &2719682053727153944
@@ -175,6 +175,7 @@ MonoBehaviour:
   healthPoints: 420
   maxHealthPoints: 420
   isBoss: 1
+  isAffectedByGravity: 0
   poisoned: 0
   isFreezed: 0
   damagetik: 0
@@ -182,6 +183,7 @@ MonoBehaviour:
   charaRenderer: {fileID: 0}
   shaderSpawnpoint: {fileID: 0}
   freezeColor: {r: 0, g: 0, b: 0, a: 0}
+  isInvencible: 0
   audioManager: {fileID: 0}
   deadClipSound: {fileID: 0}
   damageClipSound: {fileID: 0}

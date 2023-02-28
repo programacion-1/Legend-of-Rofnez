@@ -41,6 +41,7 @@ namespace RPG.Core
                     break;
                 }
             }
+            ShowVisualChanges();
         }
 
         public override void DeathBehaviour()
