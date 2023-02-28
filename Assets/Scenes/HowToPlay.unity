@@ -190,7 +190,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "- move by left clicking anywhere on the stage\n-attack by left clicking
     on an enemy and \robject\n- special attack:right click\n- open inventory: hold
-    tab\n- change weapon: Q\n- enable/disable God Mode: F"
+    tab\n- change weapon: Q\n- change magic: W\n- consume Health Potion: Alpha 1\n-
+    consume Magic Potion: Alpha 2\n- enable/disable God Mode: F"
 --- !u!222 &240093325
 CanvasRenderer:
   m_ObjectHideFlags: 0
