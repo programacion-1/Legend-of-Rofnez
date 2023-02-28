@@ -43,8 +43,7 @@ namespace RPG.Combat
                 {
                     playerWeaponInventory.SetMeleeWeapon(defaultWeapon);
                     playerWeaponInventory.SetActiveWeapon(playerWeaponInventory.GetMeleeWeapon());
-                } 
-                
+                }               
             }
             EquipShield(defaultShield);
         }

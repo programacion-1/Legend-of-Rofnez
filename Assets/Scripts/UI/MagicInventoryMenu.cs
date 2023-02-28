@@ -21,19 +21,56 @@ namespace RPG.UI
             currentMagicImage.sprite = defaultMagicSprite;
         }
 
-        public void SetCurrentMagicActive(int currentMagic)
-        {
-            /*Image activeMagicSprite = menuController.GetCurrentMagicActive().GetComponent<Image>();
-            if(currentMagic < inventoryMagicSprites.Length)
-            {
-                for(int i = 0; i < inventoryMagicSprites.Length; i++)
-                {
-                    if(i == currentMagic)
-                    {
 
-                    }
-                }
-            }*/
+        //Getters y Setters
+
+        public Sprite GetDefaultMagicSprite()
+        {
+            return defaultMagicSprite;
+        }
+        public string GetDefaultMagicText()
+        {
+            return defaultMagicText;
+        }
+
+        public Sprite GetCurrentMagicSprite()
+        {
+            return currentMagicSprite;
+        }
+
+        public void SetCurrentMagicSprite(Sprite newSprite)
+        {
+            currentMagicSprite = newSprite;
+        }
+
+        public Image GetCurrentMagicImage()
+        {
+            return currentMagicImage;
+        }
+
+        public void SetCurrentMagicImage()
+        {
+            currentMagicImage.sprite = currentMagicSprite;
+        }
+
+        public Image[] GetInventoryMagicImages()
+        {
+            return inventoryMagicSprites;
+        }
+
+        public Text[] GetInventoryMagicTexts()
+        {
+            return inventoryMagicTexts;
+        }
+
+        public void SetInventoryMagicImage(int index, Sprite sprite)
+        {
+            inventoryMagicSprites[index].sprite = sprite;
+        }
+
+        public void SetInventoryMagicText(int index, string text)
+        {
+            inventoryMagicTexts[index].text = text;
         }
     }
 
