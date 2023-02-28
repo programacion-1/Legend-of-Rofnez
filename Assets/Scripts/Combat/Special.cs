@@ -16,21 +16,18 @@ namespace RPG.Combat
         protected MagicPoints magicPoints;
         [SerializeField] Magic defaultMagic = null;
         [SerializeField] protected Magic currentMagic = null;
-
         float timeToActivateMagic = Mathf.Infinity;
         private Health specialTarget;
+        MagicInventory magicInventory;
         MagicInventoryMenu magicInventoryMenu;
 
         void Start()
         {
             anim = GetComponent<Animator>();
             magicPoints = GetComponent<MagicPoints>();
+            magicInventory = GetComponent<MagicInventory>();
             magicInventoryMenu = GameObject.FindObjectOfType<MagicInventoryMenu>();
-            setCurrentMagic(defaultMagic);
-            if(gameObject.tag == "Player")
-            {
-                
-            }
+            setCurrentMagic(defaultMagic);    
         }
 
         protected void Update()
@@ -48,11 +45,18 @@ namespace RPG.Combat
         {
             currentMagic = magic;
             UpdateAnimatorMagicBool();
+            UpdateCurrentMagicSprite();
         }
 
         public void UpdateAnimatorMagicBool()
         {
             if(currentMagic != null) currentMagic.SetAnimatorMagicAnimation(anim, magicAnims);
+        }
+
+        public void UpdateCurrentMagicSprite()
+        {
+            magicInventoryMenu.SetCurrentMagicSprite(currentMagic.GetMagicSprite());
+            magicInventoryMenu.SetCurrentMagicImage();
         }
 
         public Health GetSpecialTarget()

@@ -18,6 +18,7 @@ namespace RPG.Control
         MagicPoints magicPoints;
         WeaponInventory weaponInventory;
         MagicInventory magicInventory;
+        MagicInventoryMenu magicInventoryMenu;
         ItemInventory itemInventory;
         MenuController menuController;
         PlayerCursor playerCursor;
@@ -33,6 +34,7 @@ namespace RPG.Control
             magicPoints = GetComponent<MagicPoints>();
             weaponInventory = GetComponent<WeaponInventory>();
             magicInventory = GetComponent<MagicInventory>();
+            magicInventoryMenu = GameObject.FindObjectOfType<MagicInventoryMenu>();
             itemInventory = GetComponent<ItemInventory>();
             playerCursor = GetComponent<PlayerCursor>();
             menuController = GameObject.FindObjectOfType<MenuController>();
@@ -197,10 +199,27 @@ namespace RPG.Control
 
         private void ChangePlayerActiveMagic()
         {
+            GetComponent<ActionScheduler>().CancelCurrentAction();
             magicIndex++;
             if(magicIndex >= magicInventory.MagicQuantity()) magicIndex = 0;
             magicInventory.SetActiveMagic(magicIndex);
         }
+
+        /*public void UpdateMagicInventoryMenu()
+        {
+            for(int i = 0; i < magicInventoryMenu.GetInventoryMagicImages().Length; i++)
+            {
+                Sprite spriteToUpdate = magicInventoryMenu.GetDefaultMagicSprite();
+                string textToUpdate = magicInventoryMenu.GetDefaultMagicText();
+                if(i < magicInventory.GetMagicList().Count)
+                {
+                    spriteToUpdate = magicInventory.GetMagicList()[i].GetMagicSprite();
+                    textToUpdate = magicInventory.GetMagicList()[i].name;
+                }
+                magicInventoryMenu.SetInventoryMagicImage(i,spriteToUpdate);
+                magicInventoryMenu.SetInventoryMagicText(i,textToUpdate);
+            }
+        }*/
 
         private bool CheckRaycastTags(RaycastHit hitPoint)
         {
