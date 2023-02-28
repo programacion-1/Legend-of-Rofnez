@@ -20,7 +20,7 @@ namespace RPG.Core
         [SerializeField] Renderer charaRenderer;
         [SerializeField] Transform shaderSpawnpoint;
         [SerializeField] Color freezeColor;
-        bool isInvencible;
+        public bool isInvencible;
         float damageTimer;
 
         [Header("Audio Clips")]
@@ -91,21 +91,11 @@ namespace RPG.Core
         private void DamageBehavoiur(float damage)
         {
             healthPoints = Mathf.Max(healthPoints - damage, 0);
+            
             ShowVisualChanges();
             PlayAudibleFeedback();
-            if (healthPoints == 0)
-            {
-                Die();
-            }
-            StartCoroutine(MiniInvincibilityCo());
-        }
 
-        private IEnumerator MiniInvincibilityCo()
-        {
-            Debug.Log("ouch");
-            isInvencible = true;
-            yield return new WaitForSeconds(1f);
-            isInvencible = false;
+            if (healthPoints == 0) Die();
         }
 
         public void Freeze(float secondsToDefreeze)
