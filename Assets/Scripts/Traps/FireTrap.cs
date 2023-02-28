@@ -18,7 +18,6 @@ public class FireTrap : Trap
     public override void TrapActivatedBehaviour()
     {
         SetCurrentTime(GetCurrentTime()-Time.deltaTime);
-        Debug.Log(GetCurrentTime());
         if(GetCurrentTime()<=0)
         {
             particle.enableEmission = false;

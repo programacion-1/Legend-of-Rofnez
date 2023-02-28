@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using RPG.Core;
 using CombatEnums;
 
@@ -16,6 +17,7 @@ namespace RPG.Combat
         [SerializeField] GameObject equippedPrefab = null;
         //[SerializeField] AnimatorOverrideController animatorOverride = null;
         [SerializeField] MagicType magicType;
+        [SerializeField] Sprite magicSprite;
 
         public void SetAnimatorMagicAnimation(Animator anim, string[] magicAnims)
         {

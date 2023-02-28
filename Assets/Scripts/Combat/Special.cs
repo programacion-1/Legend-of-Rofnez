@@ -45,7 +45,7 @@ namespace RPG.Combat
 
         public void UpdateAnimatorMagicBool()
         {
-            currentMagic.SetAnimatorMagicAnimation(anim, magicAnims);
+            if(currentMagic != null) currentMagic.SetAnimatorMagicAnimation(anim, magicAnims);
         }
 
         public Health GetSpecialTarget()
